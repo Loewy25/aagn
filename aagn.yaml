@@ -1,0 +1,15 @@
+batch_size: 8
+lr: 0.0001
+epoch: 50
+
+# Anatomy Network
+channels: 64          # number of cnn channels
+n_layers: 6           # number of cnn layers
+hidden: 64            # hidden layer size for squeeze operation
+roi_hidden: 64        # hidden layer size for roi projection
+roi_emb: 64           # roi embedding size
+
+# Gating Network
+gate_hidden: 16       # hidden layer size for gating network
+hard: false           # hard/binary selection of roi
+tau: 1                # temperature
