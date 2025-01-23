@@ -17,4 +17,5 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 unzip atlas.zip
 conda activate preprocess
 conda install ants
+pip install ants
 python preprocess.py
