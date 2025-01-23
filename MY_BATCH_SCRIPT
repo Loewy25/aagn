@@ -17,6 +17,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 unzip atlas.zip
 conda activate preprocess
 pip install numpy
+pip install pandas
 conda install -c conda-forge antspy
 
 python Data_generating.py
