@@ -13,8 +13,8 @@
 
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
-conda env create -f environment.yml
-conda env create -f preprocess_environment.yml
+
 unzip atlas.zip
 conda activate preprocess
+conda install ants
 python preprocess.py
