@@ -18,6 +18,7 @@ unzip atlas.zip
 conda activate preprocess
 pip install numpy
 pip install pandas
+pip install scikit-learn
 conda install -c conda-forge antspy
 
 python Data_generating.py
