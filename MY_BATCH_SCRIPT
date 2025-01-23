@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#SBATCH --job-name=test         # Assign a descriptive job name
+#SBATCH -N 1                    # Request 1 node
+#SBATCH --mem=30G              # Request memory
+#SBATCH -t 20:30:00             # Set maximum time
+#SBATCH --partition=tier2_cpu   # Partition selection
+#SBATCH --account=aristeidis_sotiras
+#SBATCH --exclude=gpu02
+
+#SBATCH --output=slurm-%A_%a.out
+#SBATCH --error=slurm-%A_%a.err
+
+source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
+# Move into the directory you want to inspect
+conda env create -f environment.yml
+conda env create -f preprocess_environment.yml
+unzip atlas.zip
+conda activate preprocess
+python preprocess.py
