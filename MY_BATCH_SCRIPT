@@ -19,4 +19,4 @@ conda activate preprocess
 
 conda install -c conda-forge antspy
 
-python preprocess.py
+python Data_generating.py
