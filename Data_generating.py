@@ -8,10 +8,10 @@ def generate_data_splits():
     os.makedirs('data', exist_ok=True)
 
     files = [
-        '/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_preclinical_cross-sectional.csv',
-        '/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cn_cross-sectional.csv',
-        '/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cdr_0p5_apos_cross-sectional.csv',
-        '/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cdr_gt_0p5_apos_cross-sectional.csv'
+        '/home/l.peiwang/table_preclinical_cross-sectional.csv',
+        '/home/l.peiwang/table_cn_cross-sectional.csv',
+        '/home/l.peiwang/table_cdr_0p5_apos_cross-sectional.csv',
+        '/home/l.peiwang/table_cdr_gt_0p5_apos_cross-sectional.csv'
     ]
     class_labels = ['PCN','CN','MCI','Dementia']  # Must match the order of 'files'
 
