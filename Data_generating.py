@@ -62,7 +62,7 @@ def generate_data_splits():
         random_state=42,
         stratify=temp_df['DX']
     )
-
+    os.makedirs('data', exist_ok=True)
     # Save the splits to CSV files in 'data' folder
     train_df.to_csv('data/train.csv', index=False)
     val_df.to_csv('data/val.csv', index=False)
