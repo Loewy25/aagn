@@ -2,9 +2,9 @@
 
 #SBATCH --job-name=test         # Assign a descriptive job name
 #SBATCH -N 1                    # Request 1 node
-#SBATCH --mem=30G              # Request memory
+#SBATCH --mem=50G              # Request memory
 #SBATCH -t 20:30:00             # Set maximum time
-#SBATCH --partition=tier2_cpu   # Partition selection
+#SBATCH --partition=tier2_gpu   # Partition selection
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
 
