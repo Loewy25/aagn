@@ -15,10 +15,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
 
 unzip atlas.zip
-conda activate preprocess
-pip install numpy
-pip install pandas
-pip install scikit-learn
-conda install -c conda-forge antspy
+conda activate miccai
+python train.py
 
 python Data_generating.py
