@@ -23,16 +23,10 @@
 # Activate Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-# Disable user-site packages so they don't conflict
-export PYTHONNOUSERSITE=1
+conda activate miccai
 
-# Activate your environment
-conda activate pasta_env_new_2025
-pip install --upgrade --force-reinstall "pytorch-lightning==1.9.5"
-
-# Load the CUDA/CuDNN modules provided by HPC
 module load cuda/11.7  # or the HPC’s driver module
 module load cudnn
 
-
 python train.py
+
