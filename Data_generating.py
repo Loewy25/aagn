@@ -155,4 +155,4 @@ if __name__ == "__main__":
     #    and these contain only CN or Dementia in 'label'
     #
     # 2. Then call:
-    split_and_save(images_mri, labels)
+    split_and_save(images_mri, label)
