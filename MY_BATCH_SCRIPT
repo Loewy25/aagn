@@ -13,10 +13,13 @@
 
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
+export PYTHONNOUSERSITE=1
 
 conda activate pasta_env_new_2025
 # Upgrade pip so you're sure to get the newest wheels
-pip install --upgrade pip
+
+conda update pip
+
 
 # Install antspyx from PyPI
 pip install antspyx
