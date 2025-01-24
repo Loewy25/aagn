@@ -20,9 +20,9 @@ conda activate pasta_env_new_2025
 
 conda update pip
 
+pip install scikit-learn
 
 # Install antspyx from PyPI
-pip install antspyx
 
 
 python train.py
