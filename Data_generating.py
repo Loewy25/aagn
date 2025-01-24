@@ -88,7 +88,7 @@ def generate_data_path_less():
             sub_ses_info = "/".join(row['FdgFilename'].split("/")[8:10])
 
             # Generate new directory
-            new_directory = os.path.join('/scratch/l.peiwang/derivatives_less', sub_ses_info, 'anat')
+            new_directory = os.path.join('/ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/derivatives_less', sub_ses_info, 'anat')
 
             # Get all files that match the pattern but then exclude ones that contain 'icv'
             pet_files = [f for f in glob.glob(new_directory + '/*FDG*') if 'icv' not in f]
