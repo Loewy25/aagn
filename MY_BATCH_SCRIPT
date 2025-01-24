@@ -29,5 +29,5 @@ module load cuda # or the HPC’s driver module
 module load cudnn
 
 
-#python train.py
+python train.py
 
