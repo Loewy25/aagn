@@ -18,16 +18,12 @@ export PYTHONNOUSERSITE=1
 conda activate pasta_env_new_2025
 # Upgrade pip so you're sure to get the newest wheels
 
-conda update pip
-
-pip install scikit-learn
-
-# Install antspyx from PyPI
-import torch
-print(torch.backends.cudnn.enabled)         # True if cuDNN is enabled
-print(torch.backends.cudnn.version())       # e.g. 8500
-print(torch.backends.cudnn.is_available())  # True if PyTorch sees cuDNN
 
 
-#python train.py
+
+module load cuda
+module load cudnn
+
+
+python train.py
 
