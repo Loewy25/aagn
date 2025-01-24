@@ -1,13 +1,23 @@
 #!/bin/bash
 
-#SBATCH --job-name=test          # Assign a descriptive job name
-#SBATCH -N 1                     # Request 1 node
-#SBATCH --mem=50G                # Request 50 GB memory
-#SBATCH -t 20:30:00              # Set max wall time
-#SBATCH --partition=tier2_gpu    # Partition with GPUs
-#SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02          # Exclude a problematic node if needed
 
+#SBATCH --job-name=test #Assign a descriptive job name
+
+#SBATCH -N 1                    # Request 1 node
+#SBATCH --mem=100G               # Request 400GB memory
+#SBATCH -t 19:30:00             # Set maximum time
+
+
+##SBATCH --gres=gpu:nvidia_a100_80:1
+##SBATCH --partition=tier2_gpu_dev
+#SBATCH --partition=tier2_cpu
+#SBATCH --account=aristeidis_sotiras
+#SBATCH --exclude=gpu02
+
+
+##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
+
+# Output and error filenames based on job ID and task ID
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
