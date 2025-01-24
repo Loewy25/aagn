@@ -74,7 +74,7 @@ def generate(images, labels, task):
 
 
 def generate_data_path_less():
-    files=['/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_preclinical_cross-sectional.csv','/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cn_cross-sectional.csv','/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cdr_0p5_apos_cross-sectional.csv','/scratch/jjlee/Singularity/ADNI/bids/derivatives/table_cdr_gt_0p5_apos_cross-sectional.csv']
+    files=['/home/l.peiwang/table_preclinical_cross-sectional.csv','/home/l.peiwang/table_cn_cross-sectional.csv','/home/l.peiwang/table_cdr_0p5_apos_cross-sectional.csv','/home/l.peiwang/table_cdr_gt_0p5_apos_cross-sectional.csv']
     class_labels=['PCN','CN','MCI','Dementia']
     pet_paths = []
     mri_paths = []
