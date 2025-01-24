@@ -24,11 +24,11 @@
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 conda activate miccai2
 
-module load cuda/11.3
-module load cudnn/9.6.0.74-cuda11
+module load cuda/12.1
+module load cudnn/9.6.0.74-cuda12
+
 
 pip install tensorboard
-export CUDNN_BENCHMARK=1
-export CUDNN_DETERMINISTIC=0
+
 python train.py
 
