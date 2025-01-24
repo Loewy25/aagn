@@ -1,29 +1,55 @@
 #!/bin/bash
 
-#SBATCH --job-name=test         # Assign a descriptive job name
-#SBATCH -N 1                    # Request 1 node
-#SBATCH --mem=50G              # Request memory
-#SBATCH -t 20:30:00             # Set maximum time
-#SBATCH --partition=tier2_gpu   # Partition selection
+#SBATCH --job-name=test          # Assign a descriptive job name
+#SBATCH -N 1                     # Request 1 node
+#SBATCH --mem=50G                # Request 50 GB memory
+#SBATCH -t 20:30:00              # Set max wall time
+#SBATCH --partition=tier2_gpu    # Partition with GPUs
 #SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02
+#SBATCH --exclude=gpu02          # Exclude a problematic node if needed
 
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
+# Activate Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
-# Move into the directory you want to inspect
+
+# Disable user-site packages so they don't conflict
 export PYTHONNOUSERSITE=1
 
+# Activate your environment
 conda activate pasta_env_new_2025
-# Upgrade pip so you're sure to get the newest wheels
 
-
-
-
+# Load the CUDA/CuDNN modules provided by HPC
 module load cuda
 module load cudnn
 
+# Optional: Show which Python and pip are being used
+echo "Using Python: $(which python)"
+echo "Python version: $(python --version)"
+echo "Pip location: $(which pip)"
+echo "Pip version: $(pip --version)"
+
+echo "======================================"
+echo "Checking GPU + CUDA/cuDNN availability"
+echo "======================================"
+
+# 1) nvidia-smi to confirm GPU is visible
+nvidia-smi || echo "nvidia-smi not found or no GPU detected"
+
+# 2) Check PyTorch CUDA availability
+python -c "
+import torch
+print('PyTorch version:', torch.__version__)
+print('CUDA available:', torch.cuda.is_available())
+print('PyTorch CUDA version:', torch.version.cuda)
+print('cuDNN version:', torch.backends.cudnn.version())
+"
+
+# If everything above looks correct (e.g., CUDA available == True),
+# you can proceed to run your actual training script:
+echo "======================================"
+echo "Starting train.py ..."
+echo "======================================"
 
 python train.py
-
