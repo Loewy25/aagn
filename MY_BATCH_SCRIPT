@@ -22,11 +22,11 @@
 
 # Activate Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
-conda env create -f environment.yml
 conda activate miccai2
 
 module load cuda # or the HPC’s driver module
 module load cudnn
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 
 python train.py
