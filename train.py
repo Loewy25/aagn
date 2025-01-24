@@ -71,7 +71,7 @@ if __name__ == "__main__":
         devices=[0],
         num_sanity_val_steps=0,
         deterministic=True,
-        precision=16,
+        precision=32,
         callbacks=[checkpoint_callback],
     )
 
