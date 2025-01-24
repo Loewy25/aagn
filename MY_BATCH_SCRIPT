@@ -27,6 +27,7 @@ conda activate miccai
 
 module load cuda # or the HPC’s driver module
 module load cudnn
+spidar cuda
 
 python train.py
 
