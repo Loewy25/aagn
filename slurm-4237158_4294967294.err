@@ -1,0 +1,27 @@
+replace atlas.pt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - antspy
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Traceback (most recent call last):
+  File "Data_generating.py", line 158, in <module>
+    split_and_save(images_mri, label)
+  File "Data_generating.py", line 123, in split_and_save
+    raise ValueError("No valid CN/AD data found in the provided lists.")
+ValueError: No valid CN/AD data found in the provided lists.

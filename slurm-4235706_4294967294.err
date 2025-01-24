@@ -1,0 +1,31 @@
+replace atlas.pt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - antspy
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Traceback (most recent call last):
+  File "Data_generating.py", line 74, in <module>
+    generate_data_splits()
+  File "Data_generating.py", line 57, in generate_data_splits
+    stratify=all_df['DX']
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 2421, in train_test_split
+    n_samples, test_size, train_size, default_test_size=0.25
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 2101, in _validate_shuffle_split
+    "aforementioned parameters.".format(n_samples, test_size, train_size)
+ValueError: With n_samples=0, test_size=0.3 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.

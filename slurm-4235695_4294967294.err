@@ -1,0 +1,24 @@
+replace atlas.pt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - ants
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Traceback (most recent call last):
+  File "preprocess.py", line 5, in <module>
+    import ants
+ModuleNotFoundError: No module named 'ants'

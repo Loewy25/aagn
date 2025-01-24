@@ -1,0 +1,39 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Jan 23 17:20:34 CST 2025 1737674434
+Job ID:		4235699
+Username:	l.peiwang
+Partition:	tier2_cpu
+End Slurm Prologue Thu Jan 23 17:20:34 CST 2025 1737674434
+--------------------------------------------------------------
+Archive:  atlas.zip
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Jan 23 17:20:49 CST 2025 1737674449
+Name                : test
+User                : l.peiwang
+Partition           : tier2_cpu
+Nodes               : node29
+Cores               : 1
+State               : FAILED
+Submit              : 2025-01-23T17:20:33
+Start               : 2025-01-23T17:20:33
+End                 : 2025-01-23T17:20:46
+Reserved Walltime   : 20:30:00
+Used Walltime       : 00:00:13
+Used CPU Time       : 00:00:10
+% User (Computation): 87.07%
+% System (I/O)      : 12.92%
+Mem Reserved        : 30G
+Max Mem Used        : 0.00  (0.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : node29
+Max-Disk-Write Node : node29
+Max-Disk-Read Node  : node29
+End Slurm Epilogue Thu Jan 23 17:20:49 CST 2025 1737674449
+--------------------------------------------------------------

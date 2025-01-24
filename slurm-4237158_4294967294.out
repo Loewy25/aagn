@@ -1,0 +1,60 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jan 24 09:11:02 CST 2025 1737731462
+Job ID:		4237158
+Username:	l.peiwang
+Partition:	tier2_cpu
+End Slurm Prologue Fri Jan 24 09:11:02 CST 2025 1737731462
+--------------------------------------------------------------
+Archive:  atlas.zip
+Requirement already satisfied: numpy in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (1.21.6)
+Requirement already satisfied: pandas in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (1.3.5)
+Requirement already satisfied: pytz>=2017.3 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from pandas) (2024.2)
+Requirement already satisfied: numpy>=1.17.3 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from pandas) (1.21.6)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas) (1.17.0)
+Requirement already satisfied: scikit-learn in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (1.0.2)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: scipy>=1.1.0 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from scikit-learn) (1.7.3)
+Requirement already satisfied: joblib>=0.11 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from scikit-learn) (1.3.2)
+Requirement already satisfied: numpy>=1.14.6 in /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages (from scikit-learn) (1.21.6)
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+Number of CN subjects:
+0
+Number of PCN subjects:
+0
+Number of MCI subjects:
+0
+Number of Dementia subjects:
+0
+lenth of dataset: 
+0
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jan 24 09:11:19 CST 2025 1737731479
+Name                : test
+User                : l.peiwang
+Partition           : tier2_cpu
+Nodes               : highmem02
+Cores               : 2
+State               : FAILED
+Submit              : 2025-01-24T09:10:59
+Start               : 2025-01-24T09:11:01
+End                 : 2025-01-24T09:11:17
+Reserved Walltime   : 20:30:00
+Used Walltime       : 00:00:16
+Used CPU Time       : 00:00:09
+% User (Computation): 78.08%
+% System (I/O)      : 21.91%
+Mem Reserved        : 30G
+Max Mem Used        : 0.00  (0.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : highmem02
+Max-Disk-Write Node : highmem02
+Max-Disk-Read Node  : highmem02
+End Slurm Epilogue Fri Jan 24 09:11:19 CST 2025 1737731479
+--------------------------------------------------------------
