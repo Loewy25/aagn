@@ -15,7 +15,11 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
 
 conda activate pasta_env_new_2025
-conda install -c conda-forge antspyx
+# Upgrade pip so you're sure to get the newest wheels
+pip install --upgrade pip
+
+# Install antspyx from PyPI
+pip install antspyx
 
 
 python train.py
