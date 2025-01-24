@@ -79,21 +79,33 @@ class AnatomyNet(nn.Module):
         self.scale = nn.ModuleList([nn.Sequential(MLP(channels, hidden, channels), nn.Sigmoid()) for _ in range(self.n_roi)])  
         self.proj = nn.ModuleList([MLP(channels, roi_hidden, roi_emb) for _ in range(self.n_roi)])
 
-    
     def forward(self, data):
+        # Shape after conv is typically (B, C, D, H, W)
         emb = self.conv(data)
 
-        roi_emb = emb.view(emb.size(0), emb.size(1), -1).matmul(self.atlas_mask.t())     # ROI-aware squeeze
-        roi_emb = (roi_emb / self.atlas_mask.sum(dim=-1)).permute(0, 2, 1)               # Normalize by ROI size
+        B, C, D, H, W = emb.shape
+        # Flatten only the spatial dimensions => (B, C, D*H*W)
+        emb = emb.view(B, C, D * H * W)  # DO NOT include 'C' in that flattening
+
+        # atlas_mask is (n_roi, voxel_count), so atlas_mask.t() is (voxel_count, n_roi)
+        # Now we can do (B, C, voxel_count) x (voxel_count, n_roi) => (B, C, n_roi)
+        roi_emb = emb.matmul(self.atlas_mask.t())  # ROI-aware squeeze
+
+        # Normalize each ROI by its size. (n_roi,) = self.atlas_mask.sum(dim=-1)
+        # -> broadcast to (1, 1, n_roi) when dividing (B, C, n_roi)
+        roi_emb = (roi_emb / self.atlas_mask.sum(dim=-1)).permute(0, 2, 1)
+        # final shape (B, n_roi, C)
 
         out = []
         for i in range(self.n_roi):
-            feature = roi_emb[:, i, :].unsqueeze(1)
-            scale = self.scale[i](feature)
-            scaled_feature = scale * feature  # excite 
-            out.append( self.proj[i]( scaled_feature )  )
+            # roi_emb[:, i, :] => shape (B, C)
+            feature = roi_emb[:, i, :].unsqueeze(1)  # (B, 1, C)
+            scale = self.scale[i](feature)  # (B, 1, C)
+            scaled_feature = scale * feature  # (B, 1, C)
+            out.append(self.proj[i](scaled_feature))  # (B, 1, roi_emb_dim)
 
-        return torch.cat(out, dim=1)  # size: B x n_roi x hidden_dim
+        # Concatenate along dim=1 => (B, n_roi, roi_emb_dim)
+        return torch.cat(out, dim=1)
             
 
 class GateNet(nn.Module):
