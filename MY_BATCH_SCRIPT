@@ -15,7 +15,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
 
 conda activate pasta_env_new_2025
-conda install -c conda-forge pytorch-lightning
+conda install -c conda-forge antspyx
 
 
 python train.py
