@@ -1,4 +1,4 @@
-name: miccai
+name: miccai2
 channels:
   - conda-forge
   - defaults
