@@ -16,6 +16,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 unzip atlas.zip
 conda activate miccai
+pip install pandas
 python train.py
 
 python Data_generating.py
