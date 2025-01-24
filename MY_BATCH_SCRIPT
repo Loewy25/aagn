@@ -8,9 +8,8 @@
 #SBATCH -t 19:30:00             # Set maximum time
 
 
-##SBATCH --gres=gpu:nvidia_a100_80:1
-##SBATCH --partition=tier2_gpu_dev
-#SBATCH --partition=tier2_cpu
+#SBATCH --gres=gpu:nvidia_a100_80:1
+#SBATCH --partition=tier2_gpu_dev
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
 
@@ -31,8 +30,9 @@ export PYTHONNOUSERSITE=1
 conda activate pasta_env_new_2025
 
 # Load the CUDA/CuDNN modules provided by HPC
-module load cuda
+module load cuda/11.7  # or the HPC’s driver module
 module load cudnn
+
 
 # Optional: Show which Python and pip are being used
 echo "Using Python: $(which python)"
