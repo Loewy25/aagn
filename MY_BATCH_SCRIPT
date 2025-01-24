@@ -14,10 +14,8 @@
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 # Move into the directory you want to inspect
 
-unzip atlas.zip
 conda activate pasta_env_new_2025
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install pytorch-lightning
 
-pip install pandas
 python train.py
 
