@@ -22,10 +22,10 @@
 
 # Activate Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
-
+conda env create -f environment.yml
 conda activate miccai
 
-module load cuda/11.7  # or the HPC’s driver module
+module load cuda # or the HPC’s driver module
 module load cudnn
 
 python train.py
