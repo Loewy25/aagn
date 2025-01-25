@@ -3,7 +3,6 @@ import argparse
 import pandas as pd
 
 import ants
-from ants.utils.bias_correction import n4_bias_field_correction
 from tqdm import tqdm
 from deepbrain import Extractor
 import nibabel as nib
@@ -31,8 +30,8 @@ if __name__ == "__main__":
     # Helper function to process a single subject
     def process_file(in_path, out_path):
         # 1) Bias field correction
-        orig = ants.image_read(in_path, reorient=True)
-        orig = n4_bias_field_correction(orig)
+        orig = ants.image_read(filename, reorient=True)
+        orig = ants.n4_bias_field_correction(orig)
 
         # 2) Brain extraction via deepbrain
         img = orig.numpy()
