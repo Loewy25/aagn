@@ -25,7 +25,9 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 
 conda activate preprocess
-pip install deepbrain
+pip uninstall ants
+pip install antspyx
+
 
 python preprocess.py \
   --train_csv data/train.csv \
