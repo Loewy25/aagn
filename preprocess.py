@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Helper function to process a single subject
     def process_file(in_path, out_path):
         # 1) Bias field correction
-        orig = ants.image_read(filename, reorient=True)
+        orig = ants.image_read(in_path, reorient=True)  # Use in_path here instead of filename
         orig = ants.n4_bias_field_correction(orig)
 
         # 2) Brain extraction via deepbrain
