@@ -24,21 +24,13 @@
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 
-conda activate preprocess
-pip uninstall tensorflow
-conda remove tensorflow
-pip install tensorflow==1.13.1
+conda activate miccai2
 
 
 
-python preprocess.py \
-  --train_csv data/train.csv \
-  --val_csv data/val.csv \
-  --test_csv data/test.csv \
-  --o /scratch/l.peiwang/data
 
 
 module load cuda/12.1
 module load cudnn/9.6.0.74-cuda12
-
+python train.py 
 
