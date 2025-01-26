@@ -1,0 +1,38 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Sat Jan 25 13:45:20 CST 2025 1737834320
+Job ID:		4263066
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Sat Jan 25 13:45:20 CST 2025 1737834320
+--------------------------------------------------------------
+Collecting tqdm
+  Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Installing collected packages: tqdm
+Successfully installed tqdm-4.67.1
+--------------------------------------------------------------
+Begin Slurm Epilogue Sat Jan 25 13:45:31 CST 2025 1737834331
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpua802
+Cores               : 36
+State               : COMPLETED
+Submit              : 2025-01-25T13:45:19
+Start               : 2025-01-25T13:45:19
+End                 : 2025-01-25T13:45:29
+Reserved Walltime   : 19:30:00
+Used Walltime       : 00:00:10
+Used CPU Time       : 00:00:05
+% User (Computation): 33.00%
+% System (I/O)      : 66.98%
+Mem Reserved        : 400G
+Max Mem Used        : 0.00  (0.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpua802
+Max-Disk-Write Node : gpua802
+Max-Disk-Read Node  : gpua802
+NVIDIA A100-SXM4-80GB
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Sat Jan 25 13:45:32 CST 2025 1737834332
+--------------------------------------------------------------

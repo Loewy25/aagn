@@ -1,0 +1,245 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jan 24 09:51:37 CST 2025 1737733897
+Job ID:		4237170
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Fri Jan 24 09:51:37 CST 2025 1737733897
+--------------------------------------------------------------
+Channels:
+ - conda-forge
+ - defaults
+ - nvidia
+ - pytorch
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/l.peiwang/miniconda3/envs/pasta_env_new_2025
+
+  added / updated specs:
+    - pytorch-lightning
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    fsspec-2024.12.0           |     pyhd8ed1ab_0         135 KB  conda-forge
+    lightning-utilities-0.11.9 |     pyhd8ed1ab_1          28 KB  conda-forge
+    pytorch-lightning-2.3.3    |     pyhd8ed1ab_0         432 KB  conda-forge
+    pyyaml-6.0                 |  py310h5764c6d_4         178 KB  conda-forge
+    torchmetrics-1.6.1         |     pyhd8ed1ab_0         363 KB  conda-forge
+    tqdm-4.67.1                |     pyhd8ed1ab_1          87 KB  conda-forge
+    typing-extensions-4.5.0    |  py310h06a4308_0           9 KB
+    yaml-0.2.5                 |       h7f98852_2          87 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         1.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  colorama           conda-forge/noarch::colorama-0.4.6-pyhd8ed1ab_1 
+  fsspec             conda-forge/noarch::fsspec-2024.12.0-pyhd8ed1ab_0 
+  lightning-utiliti~ conda-forge/noarch::lightning-utilities-0.11.9-pyhd8ed1ab_1 
+  pytorch-lightning  conda-forge/noarch::pytorch-lightning-2.3.3-pyhd8ed1ab_0 
+  pyyaml             conda-forge/linux-64::pyyaml-6.0-py310h5764c6d_4 
+  torchmetrics       conda-forge/noarch::torchmetrics-1.6.1-pyhd8ed1ab_0 
+  tqdm               conda-forge/noarch::tqdm-4.67.1-pyhd8ed1ab_1 
+  typing-extensions  pkgs/main/linux-64::typing-extensions-4.5.0-py310h06a4308_0 
+  yaml               conda-forge/linux-64::yaml-0.2.5-h7f98852_2 
+
+The following packages will be UPDATED:
+
+  ca-certificates                      2022.12.7-ha878542_0 --> 2024.12.14-hbcca054_0 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working...pytorch-lightning-2. | 432 KB    |            |   0% 
+torchmetrics-1.6.1   | 363 KB    |            |   0% [A
+
+pyyaml-6.0           | 178 KB    |            |   0% [A[A
+
+
+fsspec-2024.12.0     | 135 KB    |            |   0% [A[A[A
+
+
+
+tqdm-4.67.1          | 87 KB     |            |   0% [A[A[A[A
+
+
+
+
+yaml-0.2.5           | 87 KB     |            |   0% [A[A[A[A[A
+
+
+
+
+
+lightning-utilities- | 28 KB     |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+typing-extensions-4. | 9 KB      |            |   0% [A[A[A[A[A[A[A
+torchmetrics-1.6.1   | 363 KB    | #7         |  18% [Apytorch-lightning-2. | 432 KB    | ########## | 100% pytorch-lightning-2. | 432 KB    | ########## | 100% 
+
+pyyaml-6.0           | 178 KB    | ########## | 100% [A[A
+
+pyyaml-6.0           | 178 KB    | ########## | 100% [A[A
+
+
+fsspec-2024.12.0     | 135 KB    | ########## | 100% [A[A[A
+
+
+fsspec-2024.12.0     | 135 KB    | ########## | 100% [A[A[A
+torchmetrics-1.6.1   | 363 KB    | ########## | 100% [A
+
+
+
+tqdm-4.67.1          | 87 KB     | #8         |  18% [A[A[A[A
+
+
+
+
+
+lightning-utilities- | 28 KB     | #####7     |  57% [A[A[A[A[A[A
+
+
+
+tqdm-4.67.1          | 87 KB     | ########## | 100% [A[A[A[A
+
+
+
+
+
+lightning-utilities- | 28 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+yaml-0.2.5           | 87 KB     | #8         |  18% [A[A[A[A[A
+
+
+
+
+yaml-0.2.5           | 87 KB     | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+
+typing-extensions-4. | 9 KB      | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+typing-extensions-4. | 9 KB      | ########## | 100% [A[A[A[A[A[A[A
+
+pyyaml-6.0           | 178 KB    | ########## | 100% [A[A
+
+
+fsspec-2024.12.0     | 135 KB    | ########## | 100% [A[A[A
+
+
+
+tqdm-4.67.1          | 87 KB     | ########## | 100% [A[A[A[A
+
+
+
+tqdm-4.67.1          | 87 KB     | ########## | 100% [A[A[A[A
+
+
+
+
+
+lightning-utilities- | 28 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+lightning-utilities- | 28 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+yaml-0.2.5           | 87 KB     | ########## | 100% [A[A[A[A[A
+
+
+
+
+yaml-0.2.5           | 87 KB     | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+
+typing-extensions-4. | 9 KB      | ########## | 100% [A[A[A[A[A[A[Apytorch-lightning-2. | 432 KB    | ########## | 100% 
+torchmetrics-1.6.1   | 363 KB    | ########## | 100% [A
+torchmetrics-1.6.1   | 363 KB    | ########## | 100% [A                                                     
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ | / - \ | / done
+Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jan 24 09:53:12 CST 2025 1737733992
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpu08
+Cores               : 5
+State               : FAILED
+Submit              : 2025-01-24T09:51:36
+Start               : 2025-01-24T09:51:36
+End                 : 2025-01-24T09:53:10
+Reserved Walltime   : 20:30:00
+Used Walltime       : 00:01:34
+Used CPU Time       : 00:00:29
+% User (Computation): 86.56%
+% System (I/O)      : 13.44%
+Mem Reserved        : 50G
+Max Mem Used        : 890.60M (933859328.0)
+Max Disk Write      : 476.21M (499342376.96)
+Max Disk Read       : 1.06G (1135272263.68)
+Max-Mem-Used Node   : gpu08
+Max-Disk-Write Node : gpu08
+Max-Disk-Read Node  : gpu08
+Tesla T4
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Fri Jan 24 09:53:12 CST 2025 1737733992
+--------------------------------------------------------------

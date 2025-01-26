@@ -1,0 +1,10 @@
+replace atlas.pt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+(EOF or read error, treating as "[N]one" ...)
+Traceback (most recent call last):
+  File "train.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "Data_generating.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

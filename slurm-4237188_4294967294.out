@@ -1,0 +1,223 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jan 24 10:44:56 CST 2025 1737737096
+Job ID:		4237188
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Fri Jan 24 10:44:56 CST 2025 1737737096
+--------------------------------------------------------------
+Using Python: /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/bin/python
+Python version: Python 3.10.11
+Pip location: /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/bin/pip
+Pip version: pip 24.2 from /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/pip (python 3.10)
+======================================
+Checking GPU + CUDA/cuDNN availability
+======================================
+Fri Jan 24 10:44:57 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:B1:00.0 Off |                    0 |
+| N/A   26C    P0             57W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+PyTorch version: 2.0.0
+CUDA available: True
+PyTorch CUDA version: 11.7
+cuDNN version: 8500
+======================================
+Starting train.py ...
+======================================
+"batch_size":  8
+"channels":    64
+"epoch":       50
+"gate_hidden": 16
+"hard":        False
+"hidden":      64
+"lr":          0.0001
+"n_layers":    6
+"roi_emb":     64
+"roi_hidden":  64
+"tau":         1
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jan 24 10:47:03 CST 2025 1737737223
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpua801
+Cores               : 10
+State               : FAILED
+Submit              : 2025-01-24T10:44:55
+Start               : 2025-01-24T10:44:55
+End                 : 2025-01-24T10:47:01
+Reserved Walltime   : 19:30:00
+Used Walltime       : 00:02:06
+Used CPU Time       : 00:01:38
+% User (Computation): 76.20%
+% System (I/O)      : 23.80%
+Mem Reserved        : 100G
+Max Mem Used        : 14.18G (15229423616.0)
+Max Disk Write      : 40.96K (41943.04)
+Max Disk Read       : 6.60G (7086024949.76)
+Max-Mem-Used Node   : gpua801
+Max-Disk-Write Node : gpua801
+Max-Disk-Read Node  : gpua801
+NVIDIA A100-SXM4-80GB
+Successfully retrieved statistics for job: 4237188. 
++------------------------------------------------------------------------------+
+| GPU ID: 0                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 10:44:56 2025                |
+| End Time                           | Fri Jan 24 10:47:03 2025                |
+| Total Execution Time (sec)         | 127.45                                  |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 7296                                    |
+| Power Usage (Watts)                | Avg: 79.3395, Max: 80.714, Min: 76.006  |
+| Max GPU Memory Used (bytes)        | 6587154432                              |
+| SM Clock (MHz)                     | Avg: 1398, Max: 1410, Min: 1365         |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 2, Max: 10, Min: 0                 |
+| Memory Utilization (%)             | Avg: 1, Max: 6, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 58929                                   |
+|     Avg SM Utilization (%)         | 3                                       |
+|     Avg Memory Utilization (%)     | 1                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 1                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 10:44:56 2025                |
+| End Time                           | Fri Jan 24 10:47:03 2025                |
+| Total Execution Time (sec)         | 127.45                                  |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 18949                                   |
+| Power Usage (Watts)                | Avg: 282.714, Max: 305.39, Min: 258.369 |
+| Max GPU Memory Used (bytes)        | 71340916736                             |
+| SM Clock (MHz)                     | Avg: 1410, Max: 1410, Min: 1410         |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 88, Max: 89, Min: 88               |
+| Memory Utilization (%)             | Avg: 44, Max: 46, Min: 43               |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 58975                                   |
+|     Avg SM Utilization (%)         | 73                                      |
+|     Avg Memory Utilization (%)     | 33                                      |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 2                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 10:44:56 2025                |
+| End Time                           | Fri Jan 24 10:47:03 2025                |
+| Total Execution Time (sec)         | 127.45                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 5193                                    |
+| Power Usage (Watts)                | Avg: 57.3327, Max: 57.551, Min: 57.194  |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 3                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 10:44:56 2025                |
+| End Time                           | Fri Jan 24 10:47:03 2025                |
+| Total Execution Time (sec)         | 127.45                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 5561                                    |
+| Power Usage (Watts)                | Avg: 61.4783, Max: 61.567, Min: 61.425  |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+End Slurm Epilogue Fri Jan 24 10:47:03 CST 2025 1737737223
+--------------------------------------------------------------

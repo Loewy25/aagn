@@ -1,0 +1,31 @@
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 160, in exc_logging_wrapper
+    status = run_func(*args)
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/commands/uninstall.py", line 100, in run
+    verbose=self.verbosity > 0,
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_install.py", line 660, in uninstall
+    uninstalled_pathset.remove(auto_confirm, verbose)
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_uninstall.py", line 367, in remove
+    if auto_confirm or self._allowed_to_proceed(verbose):
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_uninstall.py", line 407, in _allowed_to_proceed
+    return ask("Proceed (Y/n)? ", ("y", "n", "")) != "n"
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/utils/misc.py", line 190, in ask
+    response = input(message)
+EOFError: EOF when reading a line
+2025-01-25 13:55:42.939097: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-01-25 13:55:43.179798: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-01-25 13:55:43.206471: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2025-01-25 13:55:43.207123: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2025-01-25 13:55:45.216568: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2025-01-25 13:55:45.217445: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2025-01-25 13:55:45.217775: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Traceback (most recent call last):
+  File "preprocess.py", line 27, in <module>
+    ext = Extractor()
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/deepbrain/extractor.py", line 14, in __init__
+    self.load_pb()
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/deepbrain/extractor.py", line 18, in load_pb
+    self.sess = tf.Session(graph=graph)
+AttributeError: module 'tensorflow' has no attribute 'Session'

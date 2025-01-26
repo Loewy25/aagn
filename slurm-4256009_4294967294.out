@@ -1,0 +1,62 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Sat Jan 25 12:35:53 CST 2025 1737830153
+Job ID:		4256009
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Sat Jan 25 12:35:53 CST 2025 1737830153
+--------------------------------------------------------------
+Requirement already satisfied: tensorboard in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (2.11.2)
+Requirement already satisfied: absl-py>=0.4 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (2.1.0)
+Requirement already satisfied: grpcio>=1.24.3 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (1.62.3)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (2.38.0)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (0.4.6)
+Requirement already satisfied: markdown>=2.6.8 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (3.4.4)
+Requirement already satisfied: numpy>=1.12.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (1.21.6)
+Requirement already satisfied: protobuf<4,>=3.9.2 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (3.20.3)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (2.28.1)
+Requirement already satisfied: setuptools>=41.0.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (50.3.0.post20201103)
+Requirement already satisfied: tensorboard-data-server<0.7.0,>=0.6.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (0.6.1)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (1.8.1)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (2.2.3)
+Requirement already satisfied: wheel>=0.26 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from tensorboard) (0.35.1)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from google-auth<3,>=1.6.3->tensorboard) (5.5.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from google-auth<3,>=1.6.3->tensorboard) (0.3.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from google-auth<3,>=1.6.3->tensorboard) (4.9)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard) (2.0.0)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from markdown>=2.6.8->tensorboard) (6.7.0)
+Requirement already satisfied: charset-normalizer<3,>=2 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard) (2.1.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard) (1.26.13)
+Requirement already satisfied: certifi>=2017.4.17 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard) (2022.12.7)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from werkzeug>=1.0.1->tensorboard) (2.1.5)
+Requirement already satisfied: zipp>=0.5 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard) (3.15.0)
+Requirement already satisfied: typing-extensions>=3.6.4 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard) (4.4.0)
+Requirement already satisfied: pyasn1<0.6.0,>=0.4.6 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard) (0.5.1)
+Requirement already satisfied: oauthlib>=3.0.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard) (3.2.2)
+--------------------------------------------------------------
+Begin Slurm Epilogue Sat Jan 25 12:37:27 CST 2025 1737830247
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpua802
+Cores               : 36
+State               : FAILED
+Submit              : 2025-01-25T12:35:52
+Start               : 2025-01-25T12:35:53
+End                 : 2025-01-25T12:37:25
+Reserved Walltime   : 19:30:00
+Used Walltime       : 00:01:32
+Used CPU Time       : 00:00:10
+% User (Computation): 50.51%
+% System (I/O)      : 49.49%
+Mem Reserved        : 400G
+Max Mem Used        : 613.60M (643407872.0)
+Max Disk Write      : 10.24K (10485.76)
+Max Disk Read       : 64.73M (67874324.48)
+Max-Mem-Used Node   : gpua802
+Max-Disk-Write Node : gpua802
+Max-Disk-Read Node  : gpua802
+NVIDIA A100-SXM4-80GB
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Sat Jan 25 12:37:27 CST 2025 1737830247
+--------------------------------------------------------------

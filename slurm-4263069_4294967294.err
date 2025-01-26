@@ -1,0 +1,58 @@
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 160, in exc_logging_wrapper
+    status = run_func(*args)
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/commands/uninstall.py", line 100, in run
+    verbose=self.verbosity > 0,
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_install.py", line 660, in uninstall
+    uninstalled_pathset.remove(auto_confirm, verbose)
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_uninstall.py", line 367, in remove
+    if auto_confirm or self._allowed_to_proceed(verbose):
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/req/req_uninstall.py", line 407, in _allowed_to_proceed
+    return ask("Proceed (Y/n)? ", ("y", "n", "")) != "n"
+  File "/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/pip/_internal/utils/misc.py", line 190, in ask
+    response = input(message)
+EOFError: EOF when reading a line
+
+PackagesNotFoundError: The following packages are missing from the target environment:
+  - tensorflow
+
+
+2025-01-25 14:02:14.488181: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2025-01-25 14:02:14.508083: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000000000 Hz
+2025-01-25 14:02:14.510632: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5650b5db2e30 executing computations on platform Host. Devices:
+2025-01-25 14:02:14.511512: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+/home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning:
+
+Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+
+WARNING:tensorflow:From /home/l.peiwang/miniconda3/envs/preprocess/lib/python3.7/site-packages/deepbrain/extractor.py:19: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.gfile.GFile.
+Processing data/train.csv:   0%|          | 0/289 [00:00<?, ?it/s]Processing data/train.csv:   0%|          | 0/289 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "preprocess.py", line 70, in <module>
+    process_file(in_path, out_path)
+  File "preprocess.py", line 33, in process_file
+    orig = ants.image_read(filename, reorient=True)
+NameError: name 'filename' is not defined

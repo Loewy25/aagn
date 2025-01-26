@@ -1,0 +1,4 @@
+
+CondaValueError: prefix already exists: /home/l.peiwang/miniconda3/envs/miccai
+
+/var/spool/slurmd/job4237196/slurm_script: line 30: spidar: command not found

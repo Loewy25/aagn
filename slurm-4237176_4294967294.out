@@ -1,0 +1,68 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jan 24 10:06:08 CST 2025 1737734768
+Job ID:		4237176
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Fri Jan 24 10:06:08 CST 2025 1737734768
+--------------------------------------------------------------
+Channels:
+ - defaults
+ - conda-forge
+ - nvidia
+ - pytorch
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+# All requested packages already installed.
+
+Collecting scikit-learn
+  Downloading scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Requirement already satisfied: numpy>=1.19.5 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from scikit-learn) (1.23.5)
+Requirement already satisfied: scipy>=1.6.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from scikit-learn) (1.10.1)
+Requirement already satisfied: joblib>=1.2.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from scikit-learn) (1.2.0)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Downloading scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 64.7 MB/s eta 0:00:00
+Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, scikit-learn
+Successfully installed scikit-learn-1.6.1 threadpoolctl-3.5.0
+"batch_size":  8
+"channels":    64
+"epoch":       50
+"gate_hidden": 16
+"hard":        False
+"hidden":      64
+"lr":          0.0001
+"n_layers":    6
+"roi_emb":     64
+"roi_hidden":  64
+"tau":         1
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jan 24 10:09:11 CST 2025 1737734951
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpu08
+Cores               : 5
+State               : FAILED
+Submit              : 2025-01-24T10:06:07
+Start               : 2025-01-24T10:06:07
+End                 : 2025-01-24T10:09:09
+Reserved Walltime   : 20:30:00
+Used Walltime       : 00:03:02
+Used CPU Time       : 00:01:37
+% User (Computation): 75.67%
+% System (I/O)      : 24.33%
+Mem Reserved        : 50G
+Max Mem Used        : 13.28G (14257655808.0)
+Max Disk Write      : 99.17M (103987281.92)
+Max Disk Read       : 7.41G (7959079813.12)
+Max-Mem-Used Node   : gpu08
+Max-Disk-Write Node : gpu08
+Max-Disk-Read Node  : gpu08
+Tesla T4
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Fri Jan 24 10:09:11 CST 2025 1737734951
+--------------------------------------------------------------

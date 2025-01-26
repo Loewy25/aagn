@@ -1,0 +1,303 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jan 24 11:28:22 CST 2025 1737739702
+Job ID:		4237206
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Fri Jan 24 11:28:22 CST 2025 1737739702
+--------------------------------------------------------------
+Collecting antspyx
+  Downloading antspyx-0.4.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (781 bytes)
+Collecting pandas (from antspyx)
+  Downloading pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Requirement already satisfied: numpy in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from antspyx) (1.21.6)
+Collecting scipy (from antspyx)
+  Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.2 kB)
+Collecting scikit-image (from antspyx)
+  Downloading scikit_image-0.19.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (8.0 kB)
+Collecting scikit-learn (from antspyx)
+  Downloading scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting statsmodels (from antspyx)
+  Downloading statsmodels-0.13.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+Collecting webcolors (from antspyx)
+  Downloading webcolors-1.13-py3-none-any.whl.metadata (2.6 kB)
+Collecting matplotlib (from antspyx)
+  Downloading matplotlib-3.5.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.7 kB)
+Requirement already satisfied: pyyaml in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from antspyx) (6.0.1)
+Collecting chart-studio (from antspyx)
+  Downloading chart_studio-1.1.0-py3-none-any.whl.metadata (1.3 kB)
+Requirement already satisfied: Pillow in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from antspyx) (9.3.0)
+Collecting nibabel (from antspyx)
+  Downloading nibabel-4.0.2-py3-none-any.whl.metadata (6.1 kB)
+Collecting plotly (from chart-studio->antspyx)
+  Downloading plotly-5.18.0-py3-none-any.whl.metadata (7.0 kB)
+Requirement already satisfied: requests in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from chart-studio->antspyx) (2.28.1)
+Collecting retrying>=1.3.3 (from chart-studio->antspyx)
+  Downloading retrying-1.3.4-py3-none-any.whl.metadata (6.9 kB)
+Collecting six (from chart-studio->antspyx)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting cycler>=0.10 (from matplotlib->antspyx)
+  Downloading cycler-0.11.0-py3-none-any.whl.metadata (785 bytes)
+Collecting fonttools>=4.22.0 (from matplotlib->antspyx)
+  Downloading fonttools-4.38.0-py3-none-any.whl.metadata (138 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.5/138.5 kB 2.3 MB/s eta 0:00:00
+Collecting kiwisolver>=1.0.1 (from matplotlib->antspyx)
+  Downloading kiwisolver-1.4.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: packaging>=20.0 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from matplotlib->antspyx) (24.0)
+Collecting pyparsing>=2.2.1 (from matplotlib->antspyx)
+  Downloading pyparsing-3.1.4-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->antspyx)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Requirement already satisfied: setuptools in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from nibabel->antspyx) (50.3.0.post20201103)
+Collecting pytz>=2017.3 (from pandas->antspyx)
+  Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting networkx>=2.2 (from scikit-image->antspyx)
+  Downloading networkx-2.6.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting imageio>=2.4.1 (from scikit-image->antspyx)
+  Downloading imageio-2.31.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting tifffile>=2019.7.26 (from scikit-image->antspyx)
+  Downloading tifffile-2021.11.2-py3-none-any.whl.metadata (29 kB)
+Collecting PyWavelets>=1.1.1 (from scikit-image->antspyx)
+  Downloading PyWavelets-1.3.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (1.9 kB)
+Collecting joblib>=0.11 (from scikit-learn->antspyx)
+  Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn->antspyx)
+  Downloading threadpoolctl-3.1.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting patsy>=0.5.2 (from statsmodels->antspyx)
+  Using cached patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: typing-extensions in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from kiwisolver>=1.0.1->matplotlib->antspyx) (4.4.0)
+Collecting tenacity>=6.2.0 (from plotly->chart-studio->antspyx)
+  Downloading tenacity-8.2.3-py3-none-any.whl.metadata (1.0 kB)
+Requirement already satisfied: charset-normalizer<3,>=2 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests->chart-studio->antspyx) (2.1.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests->chart-studio->antspyx) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests->chart-studio->antspyx) (1.26.13)
+Requirement already satisfied: certifi>=2017.4.17 in /home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages (from requests->chart-studio->antspyx) (2022.12.7)
+Downloading antspyx-0.4.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (346.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.0/346.0 MB 27.9 MB/s eta 0:00:00
+Downloading chart_studio-1.1.0-py3-none-any.whl (64 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.4/64.4 kB 7.6 MB/s eta 0:00:00
+Downloading matplotlib-3.5.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.2/11.2 MB 101.9 MB/s eta 0:00:00
+Downloading nibabel-4.0.2-py3-none-any.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 89.3 MB/s eta 0:00:00
+Downloading pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 101.9 MB/s eta 0:00:00
+Downloading scikit_image-0.19.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (13.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 102.1 MB/s eta 0:00:00
+Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.1/38.1 MB 91.3 MB/s eta 0:00:00
+Downloading scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.8/24.8 MB 96.7 MB/s eta 0:00:00
+Downloading statsmodels-0.13.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 105.1 MB/s eta 0:00:00
+Downloading webcolors-1.13-py3-none-any.whl (14 kB)
+Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 965.4/965.4 kB 79.9 MB/s eta 0:00:00
+Downloading imageio-2.31.2-py3-none-any.whl (313 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.2/313.2 kB 37.1 MB/s eta 0:00:00
+Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 kB 36.9 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 76.5 MB/s eta 0:00:00
+Downloading networkx-2.6.3-py3-none-any.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 88.9 MB/s eta 0:00:00
+Using cached patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+Downloading pyparsing-3.1.4-py3-none-any.whl (104 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.1/104.1 kB 12.3 MB/s eta 0:00:00
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+Downloading PyWavelets-1.3.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 101.5 MB/s eta 0:00:00
+Downloading retrying-1.3.4-py3-none-any.whl (11 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Downloading tifffile-2021.11.2-py3-none-any.whl (178 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.9/178.9 kB 26.3 MB/s eta 0:00:00
+Downloading plotly-5.18.0-py3-none-any.whl (15.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.6/15.6 MB 101.4 MB/s eta 0:00:00
+Downloading tenacity-8.2.3-py3-none-any.whl (24 kB)
+Installing collected packages: pytz, webcolors, tifffile, threadpoolctl, tenacity, six, scipy, PyWavelets, pyparsing, patsy, nibabel, networkx, kiwisolver, joblib, imageio, fonttools, cycler, scikit-learn, scikit-image, retrying, python-dateutil, plotly, pandas, matplotlib, chart-studio, statsmodels, antspyx
+Successfully installed PyWavelets-1.3.0 antspyx-0.4.2 chart-studio-1.1.0 cycler-0.11.0 fonttools-4.38.0 imageio-2.31.2 joblib-1.3.2 kiwisolver-1.4.5 matplotlib-3.5.3 networkx-2.6.3 nibabel-4.0.2 pandas-1.3.5 patsy-1.0.1 plotly-5.18.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2024.2 retrying-1.3.4 scikit-image-0.19.3 scikit-learn-1.0.2 scipy-1.7.3 six-1.17.0 statsmodels-0.13.5 tenacity-8.2.3 threadpoolctl-3.1.0 tifffile-2021.11.2 webcolors-1.13
+1.12.1+cu113 True 11.3
+"batch_size":  8
+"channels":    64
+"epoch":       50
+"gate_hidden": 16
+"hard":        False
+"hidden":      64
+"lr":          0.0001
+"n_layers":    6
+"roi_emb":     64
+"roi_hidden":  64
+"tau":         1
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jan 24 11:32:35 CST 2025 1737739955
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpua801
+Cores               : 10
+State               : FAILED
+Submit              : 2025-01-24T11:28:21
+Start               : 2025-01-24T11:28:22
+End                 : 2025-01-24T11:32:32
+Reserved Walltime   : 19:30:00
+Used Walltime       : 00:04:10
+Used CPU Time       : 00:03:16
+% User (Computation): 84.06%
+% System (I/O)      : 15.94%
+Mem Reserved        : 100G
+Max Mem Used        : 11.30G (12130836480.0)
+Max Disk Write      : 2.91G (3123456245.76)
+Max Disk Read       : 7.35G (7897182371.84)
+Max-Mem-Used Node   : gpua801
+Max-Disk-Write Node : gpua801
+Max-Disk-Read Node  : gpua801
+NVIDIA A100-SXM4-80GB
+Successfully retrieved statistics for job: 4237206. 
++------------------------------------------------------------------------------+
+| GPU ID: 0                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 11:28:22 2025                |
+| End Time                           | Fri Jan 24 11:32:35 2025                |
+| Total Execution Time (sec)         | 253.21                                  |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 16584                                   |
+| Power Usage (Watts)                | Avg: 79.0764, Max: 80.9, Min: 70.495    |
+| Max GPU Memory Used (bytes)        | 6587154432                              |
+| SM Clock (MHz)                     | Avg: 1393, Max: 1410, Min: 1275         |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 9, Max: 50, Min: 0                 |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 58929                                   |
+|     Avg SM Utilization (%)         | 3                                       |
+|     Avg Memory Utilization (%)     | 1                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 1                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 11:28:22 2025                |
+| End Time                           | Fri Jan 24 11:32:35 2025                |
+| Total Execution Time (sec)         | 253.21                                  |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 45904                                   |
+| Power Usage (Watts)                | Avg: 188.732, Max: 286.659, Min: 76.269 |
+| Max GPU Memory Used (bytes)        | 71340916736                             |
+| SM Clock (MHz)                     | Avg: 1410, Max: 1410, Min: 1410         |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 70, Max: 90, Min: 0                |
+| Memory Utilization (%)             | Avg: 33, Max: 47, Min: 0                |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 58975                                   |
+|     Avg SM Utilization (%)         | 74                                      |
+|     Avg Memory Utilization (%)     | 36                                      |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 2                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 11:28:22 2025                |
+| End Time                           | Fri Jan 24 11:32:35 2025                |
+| Total Execution Time (sec)         | 253.21                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 12133                                   |
+| Power Usage (Watts)                | Avg: 57.3375, Max: 57.484, Min: 57.26   |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 3                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Jan 24 11:28:22 2025                |
+| End Time                           | Fri Jan 24 11:32:35 2025                |
+| Total Execution Time (sec)         | 253.21                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 12980                                   |
+| Power Usage (Watts)                | Avg: 61.4672, Max: 61.638, Min: 61.275  |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1593, Max: 1593, Min: 1593         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+End Slurm Epilogue Fri Jan 24 11:32:35 CST 2025 1737739955
+--------------------------------------------------------------
