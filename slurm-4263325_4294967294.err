@@ -1,81 +1,0 @@
-[rank: 0] Global seed set to 42
-  0%|          | 0/289 [00:00<?, ?it/s]  0%|          | 1/289 [00:00<01:26,  3.31it/s]  1%|          | 2/289 [00:00<00:52,  5.45it/s]  1%|▏         | 4/289 [00:00<00:35,  8.01it/s]  2%|▏         | 6/289 [00:00<00:30,  9.26it/s]  3%|▎         | 8/289 [00:00<00:27, 10.24it/s]  3%|▎         | 10/289 [00:01<00:26, 10.67it/s]  4%|▍         | 12/289 [00:01<00:23, 11.76it/s]  5%|▍         | 14/289 [00:01<00:24, 11.17it/s]  6%|▌         | 16/289 [00:01<00:24, 11.08it/s]  6%|▌         | 18/289 [00:01<00:22, 12.08it/s]  7%|▋         | 20/289 [00:01<00:21, 12.29it/s]  8%|▊         | 22/289 [00:02<00:21, 12.50it/s]  8%|▊         | 24/289 [00:02<00:20, 12.95it/s]  9%|▉         | 26/289 [00:02<00:20, 12.89it/s] 10%|▉         | 28/289 [00:02<00:20, 12.87it/s] 10%|█         | 30/289 [00:02<00:19, 13.03it/s] 11%|█         | 32/289 [00:02<00:20, 12.76it/s] 12%|█▏        | 34/289 [00:03<00:20, 12.31it/s] 12%|█▏        | 36/289 [00:03<00:20, 12.17it/s] 13%|█▎        | 38/289 [00:03<00:21, 11.78it/s] 14%|█▍        | 40/289 [00:03<00:21, 11.83it/s] 15%|█▍        | 42/289 [00:03<00:20, 12.30it/s] 15%|█▌        | 44/289 [00:03<00:19, 12.44it/s] 16%|█▌        | 46/289 [00:03<00:19, 12.29it/s] 17%|█▋        | 48/289 [00:04<00:18, 13.21it/s] 17%|█▋        | 50/289 [00:04<00:19, 12.30it/s] 18%|█▊        | 52/289 [00:04<00:18, 12.57it/s] 19%|█▊        | 54/289 [00:04<00:18, 12.43it/s] 19%|█▉        | 56/289 [00:04<00:18, 12.59it/s] 20%|██        | 58/289 [00:04<00:17, 12.98it/s] 21%|██        | 60/289 [00:05<00:17, 13.35it/s] 21%|██▏       | 62/289 [00:05<00:17, 13.12it/s] 22%|██▏       | 64/289 [00:05<00:16, 13.24it/s] 23%|██▎       | 66/289 [00:05<00:17, 12.73it/s] 24%|██▎       | 68/289 [00:05<00:16, 13.80it/s] 24%|██▍       | 70/289 [00:05<00:15, 13.94it/s] 25%|██▍       | 72/289 [00:05<00:14, 15.28it/s] 26%|██▌       | 74/289 [00:06<00:14, 14.68it/s] 26%|██▋       | 76/289 [00:06<00:14, 14.91it/s] 27%|██▋       | 78/289 [00:06<00:14, 15.07it/s] 28%|██▊       | 80/289 [00:06<00:13, 15.50it/s] 28%|██▊       | 82/289 [00:06<00:12, 16.55it/s] 29%|██▉       | 84/289 [00:06<00:12, 16.76it/s] 30%|██▉       | 86/289 [00:06<00:12, 16.09it/s] 30%|███       | 88/289 [00:06<00:13, 15.26it/s] 31%|███       | 90/289 [00:07<00:12, 15.59it/s] 32%|███▏      | 92/289 [00:07<00:12, 16.22it/s] 33%|███▎      | 94/289 [00:07<00:11, 17.17it/s] 33%|███▎      | 96/289 [00:07<00:11, 16.16it/s] 34%|███▍      | 98/289 [00:07<00:12, 15.71it/s] 35%|███▍      | 100/289 [00:07<00:12, 15.45it/s] 35%|███▌      | 102/289 [00:07<00:12, 14.93it/s] 36%|███▌      | 104/289 [00:07<00:11, 15.67it/s] 37%|███▋      | 106/289 [00:08<00:11, 15.80it/s] 37%|███▋      | 108/289 [00:08<00:12, 14.94it/s] 38%|███▊      | 110/289 [00:08<00:11, 15.91it/s] 39%|███▉      | 112/289 [00:08<00:11, 15.89it/s] 39%|███▉      | 114/289 [00:08<00:11, 15.65it/s] 40%|████      | 116/289 [00:08<00:10, 16.53it/s] 41%|████      | 118/289 [00:08<00:10, 16.69it/s] 42%|████▏     | 120/289 [00:08<00:11, 14.35it/s] 42%|████▏     | 122/289 [00:09<00:11, 15.01it/s] 43%|████▎     | 125/289 [00:09<00:09, 16.62it/s] 44%|████▍     | 128/289 [00:09<00:08, 18.29it/s] 45%|████▍     | 130/289 [00:09<00:08, 18.45it/s] 46%|████▌     | 132/289 [00:09<00:08, 18.57it/s] 46%|████▋     | 134/289 [00:09<00:08, 17.92it/s] 47%|████▋     | 136/289 [00:09<00:08, 17.68it/s] 48%|████▊     | 138/289 [00:09<00:08, 17.16it/s] 48%|████▊     | 140/289 [00:10<00:08, 17.51it/s] 49%|████▉     | 142/289 [00:10<00:08, 17.60it/s] 50%|████▉     | 144/289 [00:10<00:08, 16.61it/s] 51%|█████     | 146/289 [00:10<00:08, 16.27it/s] 51%|█████     | 148/289 [00:10<00:08, 16.26it/s] 52%|█████▏    | 150/289 [00:10<00:08, 15.67it/s] 53%|█████▎    | 152/289 [00:10<00:08, 16.00it/s] 53%|█████▎    | 154/289 [00:10<00:08, 16.48it/s] 54%|█████▍    | 156/289 [00:11<00:08, 16.29it/s] 55%|█████▍    | 158/289 [00:11<00:07, 16.41it/s] 55%|█████▌    | 160/289 [00:11<00:08, 15.38it/s] 56%|█████▌    | 162/289 [00:11<00:08, 14.22it/s] 57%|█████▋    | 164/289 [00:11<00:08, 14.84it/s] 57%|█████▋    | 166/289 [00:11<00:08, 14.46it/s] 58%|█████▊    | 168/289 [00:11<00:07, 15.42it/s] 59%|█████▉    | 170/289 [00:11<00:07, 15.58it/s] 60%|█████▉    | 172/289 [00:12<00:07, 15.23it/s] 60%|██████    | 174/289 [00:12<00:07, 15.33it/s] 61%|██████    | 176/289 [00:12<00:07, 15.88it/s] 62%|██████▏   | 178/289 [00:12<00:06, 16.34it/s] 62%|██████▏   | 180/289 [00:12<00:07, 15.44it/s] 63%|██████▎   | 182/289 [00:12<00:07, 15.14it/s] 64%|██████▍   | 185/289 [00:12<00:05, 17.62it/s] 65%|██████▌   | 188/289 [00:13<00:05, 18.05it/s] 66%|██████▌   | 190/289 [00:13<00:05, 17.43it/s] 66%|██████▋   | 192/289 [00:13<00:05, 17.15it/s] 67%|██████▋   | 194/289 [00:13<00:05, 16.54it/s] 68%|██████▊   | 196/289 [00:13<00:05, 16.45it/s] 69%|██████▊   | 198/289 [00:13<00:05, 16.45it/s] 69%|██████▉   | 200/289 [00:13<00:05, 16.83it/s] 70%|██████▉   | 202/289 [00:13<00:04, 17.60it/s] 71%|███████   | 204/289 [00:14<00:04, 17.87it/s] 71%|███████▏  | 206/289 [00:14<00:05, 16.34it/s] 72%|███████▏  | 208/289 [00:14<00:05, 15.93it/s] 73%|███████▎  | 210/289 [00:14<00:04, 16.05it/s] 73%|███████▎  | 212/289 [00:14<00:04, 16.58it/s] 74%|███████▍  | 214/289 [00:14<00:04, 16.45it/s] 75%|███████▍  | 216/289 [00:14<00:04, 15.92it/s] 75%|███████▌  | 218/289 [00:14<00:04, 16.08it/s] 76%|███████▌  | 220/289 [00:15<00:04, 16.89it/s] 77%|███████▋  | 222/289 [00:15<00:04, 15.85it/s] 78%|███████▊  | 224/289 [00:15<00:04, 14.57it/s] 78%|███████▊  | 226/289 [00:15<00:04, 14.13it/s] 79%|███████▉  | 229/289 [00:15<00:03, 15.97it/s] 80%|███████▉  | 231/289 [00:15<00:03, 15.31it/s] 81%|████████  | 233/289 [00:15<00:03, 15.79it/s] 81%|████████▏ | 235/289 [00:15<00:03, 16.49it/s] 82%|████████▏ | 237/289 [00:16<00:03, 16.66it/s] 83%|████████▎ | 239/289 [00:16<00:02, 17.13it/s] 83%|████████▎ | 241/289 [00:16<00:02, 17.42it/s] 84%|████████▍ | 243/289 [00:16<00:02, 16.88it/s] 85%|████████▍ | 245/289 [00:16<00:02, 16.96it/s] 85%|████████▌ | 247/289 [00:16<00:02, 16.12it/s] 86%|████████▌ | 249/289 [00:16<00:02, 16.98it/s] 87%|████████▋ | 252/289 [00:16<00:02, 17.89it/s] 88%|████████▊ | 254/289 [00:17<00:01, 17.74it/s] 89%|████████▉ | 257/289 [00:17<00:01, 19.52it/s] 90%|████████▉ | 259/289 [00:17<00:01, 18.45it/s] 90%|█████████ | 261/289 [00:17<00:01, 17.14it/s] 91%|█████████ | 263/289 [00:17<00:01, 15.42it/s] 92%|█████████▏| 265/289 [00:17<00:01, 16.33it/s] 92%|█████████▏| 267/289 [00:17<00:01, 16.44it/s] 93%|█████████▎| 269/289 [00:17<00:01, 17.29it/s] 94%|█████████▍| 271/289 [00:18<00:01, 17.41it/s] 95%|█████████▍| 274/289 [00:18<00:00, 18.29it/s] 96%|█████████▌| 276/289 [00:18<00:00, 17.41it/s] 96%|█████████▌| 278/289 [00:18<00:00, 16.72it/s] 97%|█████████▋| 280/289 [00:18<00:00, 17.43it/s] 98%|█████████▊| 282/289 [00:18<00:00, 16.33it/s] 99%|█████████▊| 285/289 [00:18<00:00, 16.77it/s] 99%|█████████▉| 287/289 [00:19<00:00, 16.94it/s]100%|██████████| 289/289 [00:19<00:00, 17.30it/s]100%|██████████| 289/289 [00:19<00:00, 15.11it/s]
-  0%|          | 0/62 [00:00<?, ?it/s]  5%|▍         | 3/62 [00:00<00:02, 19.68it/s]  8%|▊         | 5/62 [00:00<00:03, 16.50it/s] 11%|█▏        | 7/62 [00:00<00:03, 16.23it/s] 15%|█▍        | 9/62 [00:00<00:03, 15.04it/s] 18%|█▊        | 11/62 [00:00<00:03, 15.56it/s] 21%|██        | 13/62 [00:00<00:03, 14.73it/s] 24%|██▍       | 15/62 [00:00<00:03, 14.24it/s] 27%|██▋       | 17/62 [00:01<00:03, 14.33it/s] 31%|███       | 19/62 [00:01<00:02, 15.15it/s] 34%|███▍      | 21/62 [00:01<00:02, 14.51it/s] 37%|███▋      | 23/62 [00:01<00:02, 15.16it/s] 40%|████      | 25/62 [00:01<00:02, 15.71it/s] 44%|████▎     | 27/62 [00:01<00:02, 15.47it/s] 47%|████▋     | 29/62 [00:01<00:02, 15.36it/s] 50%|█████     | 31/62 [00:02<00:01, 16.08it/s] 53%|█████▎    | 33/62 [00:02<00:01, 16.32it/s] 56%|█████▋    | 35/62 [00:02<00:01, 16.35it/s] 60%|█████▉    | 37/62 [00:02<00:01, 15.59it/s] 65%|██████▍   | 40/62 [00:02<00:01, 16.89it/s] 68%|██████▊   | 42/62 [00:02<00:01, 16.83it/s] 71%|███████   | 44/62 [00:02<00:01, 15.37it/s] 74%|███████▍  | 46/62 [00:02<00:01, 15.29it/s] 77%|███████▋  | 48/62 [00:03<00:00, 15.54it/s] 81%|████████  | 50/62 [00:03<00:00, 14.96it/s] 84%|████████▍ | 52/62 [00:03<00:00, 14.59it/s] 87%|████████▋ | 54/62 [00:03<00:00, 14.55it/s] 90%|█████████ | 56/62 [00:03<00:00, 14.75it/s] 95%|█████████▌| 59/62 [00:03<00:00, 16.77it/s] 98%|█████████▊| 61/62 [00:03<00:00, 16.08it/s]100%|██████████| 62/62 [00:03<00:00, 15.53it/s]
-  0%|          | 0/63 [00:00<?, ?it/s]  5%|▍         | 3/63 [00:00<00:02, 23.57it/s] 10%|▉         | 6/63 [00:00<00:03, 18.17it/s] 13%|█▎        | 8/63 [00:00<00:03, 17.30it/s] 16%|█▌        | 10/63 [00:00<00:03, 17.32it/s] 19%|█▉        | 12/63 [00:00<00:03, 15.53it/s] 22%|██▏       | 14/63 [00:00<00:02, 16.69it/s] 25%|██▌       | 16/63 [00:00<00:02, 16.61it/s] 29%|██▊       | 18/63 [00:01<00:02, 16.87it/s] 32%|███▏      | 20/63 [00:01<00:02, 17.48it/s] 35%|███▍      | 22/63 [00:01<00:02, 14.97it/s] 38%|███▊      | 24/63 [00:01<00:02, 15.53it/s] 41%|████▏     | 26/63 [00:01<00:02, 14.36it/s] 44%|████▍     | 28/63 [00:01<00:02, 14.49it/s] 48%|████▊     | 30/63 [00:01<00:02, 15.80it/s] 51%|█████     | 32/63 [00:01<00:01, 15.92it/s] 54%|█████▍    | 34/63 [00:02<00:01, 16.66it/s] 57%|█████▋    | 36/63 [00:02<00:01, 17.10it/s] 60%|██████    | 38/63 [00:02<00:01, 16.42it/s] 63%|██████▎   | 40/63 [00:02<00:01, 17.27it/s] 67%|██████▋   | 42/63 [00:02<00:01, 16.45it/s] 70%|██████▉   | 44/63 [00:02<00:01, 16.86it/s] 73%|███████▎  | 46/63 [00:02<00:01, 16.98it/s] 76%|███████▌  | 48/63 [00:02<00:00, 15.26it/s] 81%|████████  | 51/63 [00:03<00:00, 17.03it/s] 86%|████████▌ | 54/63 [00:03<00:00, 18.77it/s] 89%|████████▉ | 56/63 [00:03<00:00, 18.82it/s] 92%|█████████▏| 58/63 [00:03<00:00, 18.16it/s] 97%|█████████▋| 61/63 [00:03<00:00, 18.22it/s]100%|██████████| 63/63 [00:03<00:00, 18.37it/s]100%|██████████| 63/63 [00:03<00:00, 16.92it/s]
-/home/l.peiwang/miniconda3/envs/miccai2/lib/python3.7/site-packages/lightning_fabric/plugins/environments/slurm.py:168: PossibleUserWarning:
-
-The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python train.py ...
-
-Using 16bit None Automatic Mixed Precision (AMP)
-GPU available: True (cuda), used: True
-TPU available: False, using: 0 TPU cores
-IPU available: False, using: 0 IPUs
-HPU available: False, using: 0 HPUs
-You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
-LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
-
-  | Name    | Type       | Params
----------------------------------------
-0 | anatomy | AnatomyNet | 1.5 M 
-1 | gate    | GateNet    | 7.4 K 
-2 | fc      | Linear     | 130   
----------------------------------------
-1.5 M     Trainable params
-0         Non-trainable params
-1.5 M     Total params
-3.022     Total estimated model params size (MB)
-Epoch 0, global step 72: 'val_acc' reached 0.68395 (best 0.68395), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 1, global step 144: 'val_acc' was not in top 1
-Epoch 2, global step 216: 'val_acc' was not in top 1
-Epoch 3, global step 288: 'val_acc' was not in top 1
-Epoch 4, global step 360: 'val_acc' reached 0.73356 (best 0.73356), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 5, global step 432: 'val_acc' was not in top 1
-Epoch 6, global step 504: 'val_acc' reached 0.75418 (best 0.75418), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 7, global step 576: 'val_acc' reached 0.75808 (best 0.75808), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 8, global step 648: 'val_acc' reached 0.78484 (best 0.78484), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 9, global step 720: 'val_acc' was not in top 1
-Epoch 10, global step 792: 'val_acc' reached 0.80435 (best 0.80435), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 11, global step 864: 'val_acc' was not in top 1
-Epoch 12, global step 936: 'val_acc' reached 0.82330 (best 0.82330), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 13, global step 1008: 'val_acc' was not in top 1
-Epoch 14, global step 1080: 'val_acc' was not in top 1
-Epoch 15, global step 1152: 'val_acc' was not in top 1
-Epoch 16, global step 1224: 'val_acc' was not in top 1
-Epoch 17, global step 1296: 'val_acc' was not in top 1
-Epoch 18, global step 1368: 'val_acc' reached 0.83222 (best 0.83222), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 19, global step 1440: 'val_acc' was not in top 1
-Epoch 20, global step 1512: 'val_acc' reached 0.85674 (best 0.85674), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 21, global step 1584: 'val_acc' was not in top 1
-Epoch 22, global step 1656: 'val_acc' reached 0.86176 (best 0.86176), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 23, global step 1728: 'val_acc' was not in top 1
-Epoch 24, global step 1800: 'val_acc' was not in top 1
-Epoch 25, global step 1872: 'val_acc' was not in top 1
-Epoch 26, global step 1944: 'val_acc' was not in top 1
-Epoch 27, global step 2016: 'val_acc' reached 0.87068 (best 0.87068), saving model to 'logs/aagn/version_9/checkpoints/aagn.ckpt' as top 1
-Epoch 28, global step 2088: 'val_acc' was not in top 1
-Epoch 29, global step 2160: 'val_acc' was not in top 1
-Epoch 30, global step 2232: 'val_acc' was not in top 1
-Epoch 31, global step 2304: 'val_acc' was not in top 1
-Epoch 32, global step 2376: 'val_acc' was not in top 1
-Epoch 33, global step 2448: 'val_acc' was not in top 1
-Epoch 34, global step 2520: 'val_acc' was not in top 1
-Epoch 35, global step 2592: 'val_acc' was not in top 1
-Epoch 36, global step 2664: 'val_acc' was not in top 1
-Epoch 37, global step 2736: 'val_acc' was not in top 1
-Epoch 38, global step 2808: 'val_acc' was not in top 1
-Epoch 39, global step 2880: 'val_acc' was not in top 1
-Epoch 40, global step 2952: 'val_acc' was not in top 1
-Epoch 41, global step 3024: 'val_acc' was not in top 1
-Epoch 42, global step 3096: 'val_acc' was not in top 1
-Epoch 43, global step 3168: 'val_acc' was not in top 1
-Epoch 44, global step 3240: 'val_acc' was not in top 1
-Epoch 45, global step 3312: 'val_acc' was not in top 1
-Epoch 46, global step 3384: 'val_acc' was not in top 1
-Epoch 47, global step 3456: 'val_acc' was not in top 1
-Epoch 48, global step 3528: 'val_acc' was not in top 1
-Epoch 49, global step 3600: 'val_acc' was not in top 1
-`Trainer.fit` stopped: `max_epochs=50` reached.
-You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
-Restoring states from the checkpoint path at logs/aagn/version_9/checkpoints/aagn.ckpt
-LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
-Loaded model weights from checkpoint at logs/aagn/version_9/checkpoints/aagn.ckpt

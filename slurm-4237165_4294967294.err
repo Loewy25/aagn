@@ -1,8 +1,0 @@
-replace atlas.pt? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
-(EOF or read error, treating as "[N]one" ...)
-ERROR: Could not find a version that satisfies the requirement torch (from versions: none)
-ERROR: No matching distribution found for torch
-Traceback (most recent call last):
-  File "train.py", line 4, in <module>
-    import torch
-ModuleNotFoundError: No module named 'torch'

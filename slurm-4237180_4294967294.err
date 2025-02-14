@@ -1,3 +1,0 @@
-/var/spool/slurmd/job4237180/slurm_script: line 26: import: command not found
-/var/spool/slurmd/job4237180/slurm_script: line 27: syntax error near unexpected token `torch.backends.cudnn.enabled'
-/var/spool/slurmd/job4237180/slurm_script: line 27: `print(torch.backends.cudnn.enabled)         # True if cuDNN is enabled'

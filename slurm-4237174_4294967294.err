@@ -1,8 +1,0 @@
-slurm-4237174_4294967294.errTraceback (most recent call last):
-  File "/home/l.peiwang/aagn/train.py", line 12, in <module>
-    from aagn import AAGN
-  File "/home/l.peiwang/aagn/aagn.py", line 10, in <module>
-    from base import Base
-  File "/home/l.peiwang/aagn/base.py", line 4, in <module>
-    from sklearn.metrics import classification_report, roc_auc_score
-ModuleNotFoundError: No module named 'sklearn'
