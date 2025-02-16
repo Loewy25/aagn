@@ -5,7 +5,7 @@ import torch
 from aagn import AAGN  # Import your model
 
 # ----- Step 1: Combine CSVs into one DataFrame -----
-csv_paths = ['data/train.csv', 'data/val.csv', 'data/test.csv']
+csv_paths = [ 'data/test.csv']
 dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
@@ -75,4 +75,45 @@ for index, row in combined_df.iterrows():
 results_df = pd.DataFrame(results)
 results_df.to_csv('inference_results.csv', index=False)
 print("Saved inference results to inference_results.csv")
+
+# -------------------------------------------------------------
+# Below: Summarize ROIs across all patients and min–max normalize
+# -------------------------------------------------------------
+
+# Identify which columns are ROIs
+roi_columns = [col for col in results_df.columns if col.startswith("roi_")]
+
+# Sum each ROI column across all patients
+roi_sums = results_df[roi_columns].sum()
+
+# Perform min–max normalization on these sums
+min_val = roi_sums.min()
+max_val = roi_sums.max()
+denominator = max_val - min_val
+
+if denominator == 0:
+    # If all sums are identical, set them all to 0 (or any constant)
+    roi_normalized = roi_sums.apply(lambda x: 0)
+else:
+    roi_normalized = (roi_sums - min_val) / denominator
+
+# Build a new row with these normalized values
+heatmap_row_dict = {
+    'filename': 'HEATMAP_ROW',  # special label for this row
+    'pred': None                # we don't normalize predictions
+}
+
+# Assign each normalized ROI sum to the new row
+for roi_col in roi_columns:
+    heatmap_row_dict[roi_col] = roi_normalized[roi_col]
+
+# Convert the dict to a DataFrame
+heatmap_row_df = pd.DataFrame([heatmap_row_dict])
+
+# Append this new row to results_df
+results_df = pd.concat([results_df, heatmap_row_df], ignore_index=True)
+
+# Save everything in a new CSV (with the extra row at the bottom)
+results_df.to_csv('inference_results_with_heatmap.csv', index=False)
+print("Saved results with heatmap row to inference_results_with_heatmap.csv")
 
