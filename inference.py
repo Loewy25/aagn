@@ -15,7 +15,7 @@ model = AAGN()
 model.load_from_checkpoint("logs/aagn/version_9/checkpoints/aagn.ckpt")
 model.eval()  # Set the model to evaluation mode
 
-# This list will hold results for each file
+# This list will hold the results, which will eventually become a DataFrame
 results = []
 
 # ----- Step 3: Loop over each file and run inference -----
@@ -28,43 +28,51 @@ for index, row in combined_df.iterrows():
         nifti_img = nib.load(file_path)
     except Exception as e:
         print(f"Error loading {file_path}: {e}")
-        # You can optionally store an error entry or skip
+        # Record the error in the results, skip further processing
         results.append({
             'filename': file_path,
             'pred': None,
-            'rois': None,
             'error': str(e)
         })
         continue
 
-    # Get the data as a NumPy array (expected shape: e.g., (91, 109, 91))
+    # Get the data as a NumPy array (expected shape, e.g., (91, 109, 91))
     mri_data = nifti_img.get_fdata()
 
-    # Convert to a PyTorch tensor and add dimensions:
-    # - channel dimension (1)
-    # - batch dimension (1)
-    tensor_data = torch.from_numpy(mri_data).float()  # shape (91, 109, 91)
-    tensor_data = tensor_data.unsqueeze(0).unsqueeze(0)  # shape (1, 1, 91, 109, 91)
+    # Convert to a PyTorch tensor and add two dimensions (batch & channel)
+    # Shape goes from (D, H, W) -> (1, 1, D, H, W)
+    tensor_data = torch.from_numpy(mri_data).float().unsqueeze(0).unsqueeze(0)
 
-    # Run inference without tracking gradients
+    # Run inference (no gradient tracking)
     with torch.no_grad():
         pred, rois = model(tensor_data, return_roi=True)
 
-    # Convert pred and rois to a Python-friendly format
-    # (For demonstration, we flatten rois into a list. Adjust as needed!)
-    pred_value = pred.cpu().numpy()  # e.g., shape (1,) if a single prediction
-    rois_value = rois.cpu().numpy()  # could be 3D or 4D, etc.
+    # Convert prediction to a Python-friendly format
+    # e.g., if pred is shape (1,) or scalar, .item() might also work
+    pred_value = pred.cpu().numpy().tolist()
 
-    # Store the results (adjust how you represent rois if large)
-    # Here we store them as list, but large arrays might be impractical in CSV.
-    results.append({
+    # We'll create a dictionary (row_dict) that represents one row in the CSV
+    row_dict = {
         'filename': file_path,
-        'pred': pred_value.tolist(),
-        'rois': rois_value.flatten().tolist()  # or some summary/mean, etc.
-    })
+        'pred': pred_value
+    }
 
-# ----- Step 4: Save results to CSV -----
-# Convert results list to a DataFrame
+    # 'rois' is a dictionary; let's store each key as its own CSV column
+    for k, v in rois.items():
+        if isinstance(v, torch.Tensor):
+            # If v is a single value (shape [] or [1]), we can do v.item()
+            # Otherwise, consider summarizing or flattening:
+            # e.g. v.cpu().numpy().mean(), v.cpu().numpy().sum(), etc.
+            row_dict[f"roi_{k}"] = v.cpu().numpy().item()
+        else:
+            # If it's not a tensor (maybe a scalar or string), just store directly
+            row_dict[f"roi_{k}"] = v
+
+    # Add this row to our results list
+    results.append(row_dict)
+
+# ----- Step 4: Convert results to a DataFrame and save to CSV -----
 results_df = pd.DataFrame(results)
 results_df.to_csv('inference_results.csv', index=False)
 print("Saved inference results to inference_results.csv")
+
