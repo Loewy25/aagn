@@ -12,7 +12,7 @@ print(f"Total samples in combined dataset: {len(combined_df)}")
 
 # ----- Step 2: Initialize your model for inference -----
 model = AAGN()
-model.load_from_checkpoint("logs/aagn/version_9/checkpoints/aagn.ckpt")
+model.load_from_checkpoint("logs/aagn/version_10/checkpoints/aagn.ckpt")
 model.eval()  # Set the model to evaluation mode
 
 # This list will hold the results, which will eventually become a DataFrame
