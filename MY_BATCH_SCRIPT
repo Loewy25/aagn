@@ -4,8 +4,8 @@
 #SBATCH --job-name=test #Assign a descriptive job name
 
 #SBATCH -N 1                    # Request 1 node
-#SBATCH --mem=400G               # Request 400GB memory
-#SBATCH -t 19:30:00             # Set maximum time
+#SBATCH --mem=40G               # Request 400GB memory
+#SBATCH -t 10:30:00             # Set maximum time
 
 
 #SBATCH --gres=gpu:nvidia_a100_80:1
