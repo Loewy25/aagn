@@ -17,8 +17,9 @@
 ##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
 
 # Output and error filenames based on job ID and task ID
-#SBATCH --output=slurm-%A_%a.out
-#SBATCH --error=slurm-%A_%a.err
+#SBATCH --output=output.out
+#SBATCH --error=output.err
+
 
 # Activate Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
@@ -32,5 +33,5 @@ conda activate miccai2
 
 module load cuda/12.1
 module load cudnn/9.6.0.74-cuda12
-python inference.py
+python dataset_.py
 
