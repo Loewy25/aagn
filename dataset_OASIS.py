@@ -13,7 +13,7 @@ excel_path = "/home/l.peiwang/aagn/Reference.xlsx"
 df = pd.read_excel(excel_path)
 
 # Directory where all OASIS NIfTI files are located
-base_dir = "/scratch/l.peiwang/OASIS_1"
+base_dir = "/scratch/l.peiwang/OASIS_\aagn"
 
 def get_label(cdr_value):
     """Return 'CN' if CDR=0, otherwise 'AD'."""
@@ -79,7 +79,7 @@ print(f"Test samples:  {n_test}   ({n_test / n_total:.2%})")
 # -------------------------------------------------------------------------
 # Save to CSV
 # -------------------------------------------------------------------------
-out_dir = "/home/l.peiwang/aagn"
+out_dir = "/home/l.peiwang/aagn/data"
 df_train.to_csv(os.path.join(out_dir, "train.csv"), index=False)
 df_val.to_csv(os.path.join(out_dir, "val.csv"), index=False)
 df_test.to_csv(os.path.join(out_dir, "test.csv"), index=False)
