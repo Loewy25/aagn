@@ -28,7 +28,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 #conda activate miccai2
 conda activate preprocess
-python preprocess.py --i /scratch/l.peiwang/OASIS_final --o /scratch/l.peiwang/OASIS_aagn
+python process_ori.py --i /scratch/l.peiwang/OASIS_final --o /scratch/l.peiwang/OASIS_aagn
 
 
 
