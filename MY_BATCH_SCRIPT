@@ -26,13 +26,14 @@
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 
-conda activate miccai2
+#conda activate miccai2
+conda activate preprocess
+python preprocess.py --i /scratch/l.peiwang/OASIS_final --o /scratch/l.peiwang/OASIS_aagn
 
 
 
 
-
-module load cuda/12.1
-module load cudnn/9.6.0.74-cuda12
-python dataset_.py
+#module load cuda/12.1
+#module load cudnn/9.6.0.74-cuda12
+#python dataset_.py
 
