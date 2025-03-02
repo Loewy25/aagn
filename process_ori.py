@@ -38,7 +38,8 @@ if __name__ == "__main__":
         mytx = ants.registration(fixed=fixed, moving=img, type_of_transform='SyN')
         img = mytx['warpedmovout']
 
-        nib.save(ants.from_numpy(img), opt.o + "/" + filename.split("/")[-1])
+        nib.save(ants.to_nibabel(img), os.path.join(opt.o, os.path.basename(filename)))
+
 
     
     print("Processing done :)")
