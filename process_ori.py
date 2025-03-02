@@ -22,7 +22,7 @@ if __name__ == "__main__":
     fixed = ants.image_read('MNI152_T1_2mm_Brain.nii.gz', reorient=True)
     ext = Extractor()
     
-    for filename in tqdm(glob.glob("{}/*.nii".format(opt.i))):
+    for filename in tqdm(glob.glob(os.path.join(opt.i, "*.nii.gz"))):
         orig = ants.image_read(filename, reorient=True)
 
         orig = n4_bias_field_correction(orig)
