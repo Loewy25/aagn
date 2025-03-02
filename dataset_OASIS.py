@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 # Path to the original OASIS Excel file
-excel_path = "/home/l.peiwang/aagn/oasis.xlsx"
+excel_path = "/home/l.peiwang/aagn/Reference.xlsx"
 
 # Read the Excel file into a DataFrame
 df = pd.read_excel(excel_path)
