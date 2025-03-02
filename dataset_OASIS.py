@@ -13,7 +13,7 @@ excel_path = "/home/l.peiwang/aagn/Reference.xlsx"
 df = pd.read_excel(excel_path)
 
 # Directory where all OASIS NIfTI files are located
-base_dir = "/scratch/l.peiwang/OASIS_\aagn"
+base_dir = "/scratch/l.peiwang/OASIS_aagn"
 
 def get_label(cdr_value):
     """Return 'CN' if CDR=0, otherwise 'AD'."""
