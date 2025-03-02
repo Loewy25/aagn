@@ -27,7 +27,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 
 conda activate miccai2
-
+pip install openpyxl
 
 
 
