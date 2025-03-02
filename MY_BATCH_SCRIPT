@@ -33,5 +33,6 @@ pip install openpyxl
 
 module load cuda/12.1
 module load cudnn/9.6.0.74-cuda12
-python dataset_OASIS.py
+
+python train.py 
 
