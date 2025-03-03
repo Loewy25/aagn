@@ -5,7 +5,7 @@ import torch
 from aagn import AAGN  # Import your model
 
 # ----- Step 1: Combine CSVs into one DataFrame -----
-csv_paths = [ 'data/test.csv']
+csv_paths = [ 'data/test.csv','data/train.csv','data/val.csv']
 dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
@@ -73,7 +73,7 @@ for index, row in combined_df.iterrows():
 
 # ----- Step 4: Convert results to a DataFrame and save to CSV -----
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results_OASIS_test.csv', index=False)
+results_df.to_csv('inference_results_OASIS_all.csv', index=False)
 print("Saved inference results to inference_results.csv")
 
 # -------------------------------------------------------------
@@ -114,6 +114,6 @@ heatmap_row_df = pd.DataFrame([heatmap_row_dict])
 results_df = pd.concat([results_df, heatmap_row_df], ignore_index=True)
 
 # Save everything in a new CSV (with the extra row at the bottom)
-results_df.to_csv('inference_results_with_heatmap_OASIS_test.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_OASIS_all.csv', index=False)
 print("Saved results with heatmap row to inference_results_with_heatmap.csv")
 
