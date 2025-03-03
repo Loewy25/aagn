@@ -12,7 +12,7 @@ print(f"Total samples in combined dataset: {len(combined_df)}")
 
 # ----- Step 2: Initialize your model for inference -----
 model = AAGN()
-model.load_from_checkpoint("logs/aagn/version_10/checkpoints/aagn.ckpt")
+model.load_from_checkpoint("logs/aagn/version_11/checkpoints/aagn.ckpt")
 model.eval()  # Set the model to evaluation mode
 
 # This list will hold the results, which will eventually become a DataFrame
@@ -73,7 +73,7 @@ for index, row in combined_df.iterrows():
 
 # ----- Step 4: Convert results to a DataFrame and save to CSV -----
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results.csv', index=False)
+results_df.to_csv('inference_results_OASIS_test.csv', index=False)
 print("Saved inference results to inference_results.csv")
 
 # -------------------------------------------------------------
@@ -114,6 +114,6 @@ heatmap_row_df = pd.DataFrame([heatmap_row_dict])
 results_df = pd.concat([results_df, heatmap_row_df], ignore_index=True)
 
 # Save everything in a new CSV (with the extra row at the bottom)
-results_df.to_csv('inference_results_with_heatmap.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_OASIS_test.csv', index=False)
 print("Saved results with heatmap row to inference_results_with_heatmap.csv")
 
