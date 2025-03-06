@@ -11,12 +11,11 @@ dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
 
-# ----- Step 2: Initialize your model for inference -----
+# ----- Step 2: Initialize the model for inference -----
 model = AAGN()
 model.load_from_checkpoint("logs/aagn/version_15/checkpoints/aagn.ckpt")
 model.eval()  # Set the model to evaluation mode
 
-# This list will hold the results, which will eventually become a DataFrame
 results = []
 
 # ----- Step 3: Loop over each file and run inference -----
