@@ -10,8 +10,9 @@ dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
 
-AAGN.load_from_checkpoint("logs/aagn/version_15/checkpoints/aagn.ckpt")
-model.eval()  # Set the model to evaluation mode
+model = AAGN.load_from_checkpoint("logs/aagn/version_15/checkpoints/aagn.ckpt")
+model.eval()
+
 
 results = []
 
