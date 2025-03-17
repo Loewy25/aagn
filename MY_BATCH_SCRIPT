@@ -32,8 +32,8 @@ pip install openpyxl
 
 
 
-module load cuda/12.1
-module load cudnn/9.6.0.74-cuda12
+module load cuda
+module load cudnn
 
 #python train.py
 #python train_new.py --finetune --ckpt_path logs/aagn/version_14/checkpoints/aagn.ckpt
