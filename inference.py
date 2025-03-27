@@ -10,7 +10,7 @@ dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
 
-model = AAGN.load_from_checkpoint("logs/aagn/version_15/checkpoints/aagn.ckpt")
+model = AAGN.load_from_checkpoint("logs/aagn/version_17/checkpoints/aagn.ckpt")
 model.eval()
 
 
@@ -60,7 +60,7 @@ for index, row in combined_df.iterrows():
     results.append(row_dict)
 
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results_ADNI_finetunning_all_v1.csv', index=False)
+results_df.to_csv('inference_results_ADNI_finetunning_inverse_all_v1.csv', index=False)
 print("Saved inference results to inference_results.csv")
 
 
@@ -90,6 +90,6 @@ heatmap_row_df = pd.DataFrame([heatmap_row_dict])
 
 results_df = pd.concat([results_df, heatmap_row_df], ignore_index=True)
 
-results_df.to_csv('inference_results_with_heatmap_ADNI_finetunning_all_v1.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_ADNI_finetunning_inverse_all_v1.csv', index=False)
 print("Saved results with heatmap row to inference_results_with_heatmap.csv")
 
