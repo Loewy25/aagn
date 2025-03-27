@@ -37,9 +37,9 @@ if __name__ == "__main__":
     
     hparams = model.hparams
 
-    train_dataset = ADNIDataset("data/train.csv", train_transforms)    
-    val_dataset = ADNIDataset("data/val.csv", test_transforms)
-    test_dataset = ADNIDataset("data/test.csv", test_transforms)
+    train_dataset = ADNIDataset("data/train (3).csv", train_transforms)    
+    val_dataset = ADNIDataset("data/val (1).csv", test_transforms)
+    test_dataset = ADNIDataset("data/test (7).csv", test_transforms)
         
     train_dataloader = torch.utils.data.DataLoader(
         train_dataset,
