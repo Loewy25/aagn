@@ -38,4 +38,4 @@ module load cudnn
 #python train.py
 #python train_new.py --finetune --ckpt_path logs/aagn/version_20/checkpoints/aagn.ckpt
 #python  train.py
-python inference.py
+python train.py
