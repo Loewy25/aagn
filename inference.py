@@ -54,7 +54,7 @@ for index, row in combined_df.iterrows():
 
 # Save inference results
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results_ADNI_corrected.csv', index=False)
+results_df.to_csv('inference_results_ADNI_corrected_v1.csv', index=False)
 print("Saved corrected inference results to inference_results_ADNI_corrected.csv")
 
 # Generate heatmap row
@@ -70,5 +70,5 @@ heatmap_row.update({col: roi_normalized[col] for col in roi_columns})
 results_df = pd.concat([results_df, pd.DataFrame([heatmap_row])], ignore_index=True)
 
 # Save results with heatmap
-results_df.to_csv('inference_results_with_heatmap_ADNI_corrected.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_ADNI_corrected_v1.csv', index=False)
 print("Saved results with heatmap to inference_results_with_heatmap_ADNI_corrected.csv")
