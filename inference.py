@@ -4,6 +4,7 @@ import torch
 from torchvision.transforms import Compose
 from transform import MinMaxInstance
 from aagn import AAGN  # Import your model
+from sklearn.metrics import classification_report, roc_auc_score
 
 # CSV paths for your datasets
 csv_paths = ['data/test (7).csv', 'data/train (3).csv', 'data/val (1).csv']
@@ -19,9 +20,13 @@ model.eval()
 transforms = Compose([MinMaxInstance()])
 
 results = []
+predictions, targets, scores = [], [], []
 
 for index, row in combined_df.iterrows():
     file_path = row['filename']  # Ensure your CSV has 'filename' column
+    true_label = 1 if row['DX'] == 'AD' else 0
+    targets.append(true_label)
+
     print(f"\nProcessing file: {file_path}")
 
     try:
@@ -36,6 +41,9 @@ for index, row in combined_df.iterrows():
 
         pred_class = probabilities.argmax(dim=1).item()
         pred_probs = probabilities.cpu().numpy().tolist()
+
+        predictions.append(pred_class)
+        scores.append(probabilities[0, 1].item())
 
         row_dict = {
             'filename': file_path,
@@ -55,7 +63,7 @@ for index, row in combined_df.iterrows():
 # Save inference results
 results_df = pd.DataFrame(results)
 results_df.to_csv('inference_results_ADNI_corrected_v1.csv', index=False)
-print("Saved corrected inference results to inference_results_ADNI_corrected.csv")
+print("Saved corrected inference results to inference_results_ADNI_corrected_v1.csv")
 
 # Generate heatmap row
 roi_columns = [col for col in results_df.columns if col.startswith("roi_")]
@@ -71,4 +79,17 @@ results_df = pd.concat([results_df, pd.DataFrame([heatmap_row])], ignore_index=T
 
 # Save results with heatmap
 results_df.to_csv('inference_results_with_heatmap_ADNI_corrected_v1.csv', index=False)
-print("Saved results with heatmap to inference_results_with_heatmap_ADNI_corrected.csv")
+print("Saved results with heatmap to inference_results_with_heatmap_ADNI_corrected_v1.csv")
+
+# Calculate and print evaluation metrics
+report = classification_report(targets, predictions, output_dict=True)
+accuracy = report["accuracy"]
+sensitivity = report["1"]["recall"]
+specificity = report["0"]["recall"]
+auc = roc_auc_score(targets, scores)
+
+print("\nEvaluation Metrics:")
+print(f"Accuracy: {accuracy:.4f}")
+print(f"Sensitivity: {sensitivity:.4f}")
+print(f"Specificity: {specificity:.4f}")
+print(f"AUC: {auc:.4f}")
