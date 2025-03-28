@@ -5,6 +5,7 @@ from transform import MinMaxInstance
 from dataset import ADNIDataset
 from aagn import AAGN
 from sklearn.metrics import classification_report, roc_auc_score
+from torch.utils.data import ConcatDataset, DataLoader
 
 # Load model exactly as before
 model = AAGN.load_from_checkpoint("logs/aagn/version_21/checkpoints/aagn.ckpt")
@@ -13,14 +14,17 @@ model.eval()
 # EXACT SAME TRANSFORMS AS TRAINING/TESTING
 test_transforms = Compose([MinMaxInstance()])
 
-# CRITICAL FIX: Use ADNIDataset directly for inference
+# Combine datasets: train, val, and test
+train_dataset = ADNIDataset("data/train (3).csv", test_transforms)
+val_dataset = ADNIDataset("data/val (1).csv", test_transforms)
 test_dataset = ADNIDataset("data/test (7).csv", test_transforms)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=False)
+
+combined_dataset = ConcatDataset([train_dataset, val_dataset, test_dataset])
+combined_loader = DataLoader(combined_dataset, batch_size=1, shuffle=False)
 
 results, predictions, targets, scores = [], [], [], []
 
-for idx, (data, target) in enumerate(test_loader):
-    file_path = test_dataset.X[idx]  # Original MRI data path or just index-based identifier
+for idx, (data, target) in enumerate(combined_loader):
     true_label = target.item()
     targets.append(true_label)
 
@@ -34,7 +38,7 @@ for idx, (data, target) in enumerate(test_loader):
     scores.append(probabilities[0, 1].item())
 
     row_dict = {
-        'filename': idx,  # or a suitable identifier
+        'filename': idx,
         'pred_class': pred_class,
         'pred_probabilities': pred_probs
     }
@@ -46,7 +50,7 @@ for idx, (data, target) in enumerate(test_loader):
 
 # Save inference results
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results_ADNI_final_correct_v3.csv', index=False)
+results_df.to_csv('inference_results_finetunning_OasisADNI_final_correct_ADNI_v1.csv', index=False)
 
 # Generate heatmap row
 roi_columns = [col for col in results_df.columns if col.startswith("roi_")]
@@ -58,7 +62,7 @@ heatmap_row = {'filename': 'HEATMAP_ROW', 'pred_class': None, 'pred_probabilitie
 heatmap_row.update({col: roi_normalized[col] for col in roi_columns})
 results_df = pd.concat([results_df, pd.DataFrame([heatmap_row])], ignore_index=True)
 
-results_df.to_csv('inference_results_with_heatmap_ADNI_final_correct_v3.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_finetunning_OasisADNI_final_correct_ADNI_v1.csv', index=False)
 
 # Final evaluation metrics
 report = classification_report(targets, predictions, output_dict=True)
