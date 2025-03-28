@@ -15,9 +15,9 @@ model.eval()
 test_transforms = Compose([MinMaxInstance()])
 
 # Combine datasets: train, val, and test
-train_dataset = ADNIDataset("data/train.csv", test_transforms)
-val_dataset = ADNIDataset("data/val.csv", test_transforms)
-test_dataset = ADNIDataset("data/test.csv", test_transforms)
+train_dataset = ADNIDataset("data/train (3).csv", test_transforms)
+val_dataset = ADNIDataset("data/val (1).csv", test_transforms)
+test_dataset = ADNIDataset("data/test (7).csv", test_transforms)
 
 combined_dataset = ConcatDataset([train_dataset, val_dataset, test_dataset])
 combined_loader = DataLoader(combined_dataset, batch_size=1, shuffle=False)
@@ -50,7 +50,7 @@ for idx, (data, target) in enumerate(combined_loader):
 
 # Save inference results
 results_df = pd.DataFrame(results)
-results_df.to_csv('inference_results_finetunning_OasisADNI_final_correct_OASIS_v1.csv', index=False)
+results_df.to_csv('inference_results_finetunning_OasisADNI_final_correct_ADNI_v1.csv', index=False)
 
 # Generate heatmap row
 roi_columns = [col for col in results_df.columns if col.startswith("roi_")]
@@ -62,7 +62,7 @@ heatmap_row = {'filename': 'HEATMAP_ROW', 'pred_class': None, 'pred_probabilitie
 heatmap_row.update({col: roi_normalized[col] for col in roi_columns})
 results_df = pd.concat([results_df, pd.DataFrame([heatmap_row])], ignore_index=True)
 
-results_df.to_csv('inference_results_with_heatmap_finetunning_OasisADNI_final_correct_OASIS_v1.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_finetunning_OasisADNI_final_correct_ADNI_v1.csv', index=False)
 
 # Final evaluation metrics
 report = classification_report(targets, predictions, output_dict=True)
