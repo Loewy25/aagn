@@ -7,7 +7,7 @@ from aagn import AAGN  # Import your model
 from sklearn.metrics import classification_report, roc_auc_score
 
 # CSV paths for your datasets
-csv_paths = ['data/test (7).csv', 'data/train (3).csv', 'data/val (1).csv']
+csv_paths = ['data/test (7).csv']
 dfs = [pd.read_csv(csv_file) for csv_file in csv_paths]
 combined_df = pd.concat(dfs, ignore_index=True)
 print(f"Total samples in combined dataset: {len(combined_df)}")
@@ -63,7 +63,7 @@ for index, row in combined_df.iterrows():
 # Save inference results
 results_df = pd.DataFrame(results)
 results_df.to_csv('inference_results_ADNI_corrected_v1.csv', index=False)
-print("Saved corrected inference results to inference_results_ADNI_corrected_v1.csv")
+print("Saved corrected inference results to inference_results_ADNI_corrected_v2.csv")
 
 # Generate heatmap row
 roi_columns = [col for col in results_df.columns if col.startswith("roi_")]
@@ -78,7 +78,7 @@ heatmap_row.update({col: roi_normalized[col] for col in roi_columns})
 results_df = pd.concat([results_df, pd.DataFrame([heatmap_row])], ignore_index=True)
 
 # Save results with heatmap
-results_df.to_csv('inference_results_with_heatmap_ADNI_corrected_v1.csv', index=False)
+results_df.to_csv('inference_results_with_heatmap_ADNI_corrected_v2.csv', index=False)
 print("Saved results with heatmap to inference_results_with_heatmap_ADNI_corrected_v1.csv")
 
 # Calculate and print evaluation metrics
