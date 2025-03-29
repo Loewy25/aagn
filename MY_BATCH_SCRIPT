@@ -19,8 +19,8 @@
 ##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
 
 # Output and error filenames based on job ID and task ID
-#SBATCH --output=output_adni.out
-#SBATCH --error=output_adni.err
+#SBATCH --output=output_adnioasis.out
+#SBATCH --error=output_adnioasis.err
 
 
 # Activate Conda
