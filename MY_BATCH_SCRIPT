@@ -19,8 +19,8 @@
 ##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
 
 # Output and error filenames based on job ID and task ID
-#SBATCH --output=output2.out
-#SBATCH --error=output2.err
+#SBATCH --output=output3.out
+#SBATCH --error=output3.err
 
 
 # Activate Conda
@@ -37,5 +37,5 @@ module load cudnn
 
 #python train.py
 #python train_new.py --finetune --ckpt_path logs/aagn/version_20/checkpoints/aagn.ckpt
-#python  train.py
-python inference.py
+python  train.py
+#python inference.py
