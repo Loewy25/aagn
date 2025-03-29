@@ -19,8 +19,8 @@
 ##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
 
 # Output and error filenames based on job ID and task ID
-#SBATCH --output=output3.out
-#SBATCH --error=output3.err
+#SBATCH --output=output4.out
+#SBATCH --error=output4.err
 
 
 # Activate Conda
